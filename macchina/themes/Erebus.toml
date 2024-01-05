@@ -1,0 +1,41 @@
+# lzmkalos theme - sauce for macchina cli
+
+separator=""
+separator_color="red"
+key_color="red"
+prefer_small_ascii = true
+
+[palette]
+type="Dark"
+visible=true
+glyph=" ⬤ "
+
+[box]
+title=" mezora "
+border="double"
+visible=true
+
+[bar]
+glyph="▮ "
+hide_delimiters=true
+visible=true
+
+[randomize]
+key_color=false
+separator_color=false
+
+[custom_ascii]
+color="red"
+# path="~/.config/macchina/themes/ascii-arch.txt"
+
+[keys]
+host=" host"
+kernel=" kernel"
+distro=" distro"
+packages=" packages"
+terminal=" terminal"
+shell=" shell"
+cpu=" cpu"
+cpu_load=" cpu"
+memory=" memory"
+battery=" battery"

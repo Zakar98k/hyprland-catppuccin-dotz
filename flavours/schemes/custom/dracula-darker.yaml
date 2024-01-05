@@ -1,0 +1,18 @@
+scheme: "Dracula Darker"
+author: "Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)"
+base00: "000000" #background
+base01: "121212"
+base02: "222222"
+base03: "333333"
+base04: "666666"
+base05: "c1c1c1" #foreground
+base06: "dedede"
+base07: "efefef"
+base08: "de5daf"
+base09: "a676b5"
+base0A: "2dca70"
+base0B: "dbe6a0"
+base0C: "b1dfd8"
+base0D: "8ab8c0"
+base0E: "a676b5"
+base0F: "589f76"

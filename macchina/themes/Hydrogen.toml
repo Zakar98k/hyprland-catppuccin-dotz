@@ -1,0 +1,59 @@
+# Hydrogen
+
+spacing         = 6
+padding         = 1
+hide_ascii      = true
+separator       = ""
+# separator       = ">"
+key_color       = "Cyan"
+separator_color = "Red"
+
+[palette]
+type = "Dark"
+# glyph = "  "
+# glyph = "▀▀ "
+glyph = "▔▔ "
+visible = true
+
+[bar]
+glyph           = "ߋ"
+# glyph           = "▂"
+symbol_open     = '['
+symbol_close    = ']'
+hide_delimiters = true
+visible         = true
+
+[box]
+title= "── Fetch ─"
+border          = "plain"
+visible         = true
+
+[box.inner_margin]
+x               = 0
+y               = 0
+
+[randomize]
+key_color       = false
+separator_color = false
+
+[keys]
+host            = "Host"
+kernel          = "Kernel"
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = "Distro"
+terminal        = "Terminal"
+shell           = "SHELL"
+packages        = "PKGS"
+uptime          = "UP"
+memory          = "Memory"
+machine         = "DEV"
+local_ip        = "Local IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "CPU Load"
+cpu             = "CPU"
+gpu             = "GPU"
+disk_space      = "Disk Space"

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=ncmpcpp
+GenericName=Music Player
+Comment=TUI frontend for MPD
+TryExec=ncmpcpp
+Exec=ncmpcpp
+Terminal=true
+Type=Application
+Keywords=Music;player;terminal;
+Icon=audio-headphones
+Categories=Music;
+StartupNotify=false

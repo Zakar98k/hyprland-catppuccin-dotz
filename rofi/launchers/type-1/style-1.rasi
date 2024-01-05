@@ -1,0 +1,13 @@
+/* Configuration */
+configuration {
+  modi: "drun,run,filebrowser";
+    show-icons: false;
+    display-drun: "󰀻 Apps";
+    display-run: "󰞷 Execute";
+    display-filebrowser: " Files";
+	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+}
+
+/* Global Properties */
+@import "../../shared/colors.rasi"
+@import "../../shared/fonts.rasi"

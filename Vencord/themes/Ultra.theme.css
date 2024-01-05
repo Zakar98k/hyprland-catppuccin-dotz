@@ -1,0 +1,66 @@
+/**
+ * @name Ultra
+ * @version 1.0.7
+ * @author TheCommieAxolotl#0001
+ * @authorId 538487970408300544
+ * @description A Smooth, Black theme
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra
+ * @website https://thecommieaxolotl.netlify.app/
+ * @donate https://github.com/sponsors/thecommieaxolotl
+ * @invite g2KnUw7u7N
+*/
+
+/* Imports */
+@import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/Touchup.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css");
+@import url("https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;400;500;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap"); */
+
+/* Source */
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Clients/betterdiscord.css");
+
+:root,
+.theme-dark {
+  --text-normal: #b3beb8;
+  --text-muted: #505754;
+  --text-link: #5f8787;
+  --text-positive: #5f8787;
+  --text-warning: #974b46;
+  --text-danger: #363c3a;
+  --text-brand: #79241f;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #c9ced0;
+  --interactive-muted: #505754;
+  --background-primary: #000000;
+  --background-secondary: #0a0a0a;
+  --background-secondary-alt: #121212;
+  --background-tertiary: #000000;
+  --background-accent: #333333;
+  --background-floating: #000000;
+  --modal-background: #000000;
+  --channeltextarea-background: #080808;
+  --info-positive-text: #fff;
+  --info-warning-text: #fff;
+  --info-warning-foreground: #974b46;
+  --info-danger-text: #fff;
+  --info-help-text: #fff;
+  --status-warning-text: #000;
+  --background-mentioned: #974b4655;
+  --background-mentioned-hover: #974b4633;
+  --background-message-hover: rgba(4, 4, 5, 0.07);
+  --scrollbar-auto-thumb: #974b46ee;
+  --brand-experiment: #974b46ee;
+  --brand-experiment-hover: #974b46aa;
+  --brand-experiment-560: #974b46ee;
+  --channels-default: #333333;
+  --selected-indicator: #505754;
+  --hover-indicator: #ffffff;
+  --font: Titillium, Noto Sans CJK Regular, Noto Color Emoji, BlexMono Nerd Font;
+  --code-font: BlexMono Nerd Font, Roboto Mono, IBM Plex Mono, monospace;
+  --boost-bar: none;
+}
+
+/* Made By The Commie Axolotl */

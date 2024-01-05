@@ -1,0 +1,18 @@
+scheme: "Tokyo Midnight"
+author: "Zakar98k (https://github.com/Zakar98k)"
+base00: "000000" #background
+base01: "121212"
+base02: "222222"
+base03: "333333"
+base04: "526270"
+base05: "D8E2EC" #foreground
+base06: "F6F6F8"
+base07: "FBFBFD"
+base08: "F7768E"
+base09: "FF9E64"
+base0A: "B7C5D3"
+base0B: "9ECE6A"
+base0C: "89DDFF"
+base0D: "7AA2F7"
+base0E: "BB9AF7"
+base0F: "BB9AF7"

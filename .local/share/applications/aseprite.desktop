@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Aseprite
+TryExec=/opt/aseprite/aseprite
+Exec=/opt/aseprite/aseprite
+Icon=aseprite
+Terminal=false
+StartupNotify=false

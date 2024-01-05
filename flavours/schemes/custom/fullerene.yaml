@@ -1,0 +1,18 @@
+scheme: "Fullerene"
+author: "Gwynsav (https://github.com/Gwynsav)"
+base00: "000000" # ----
+base01: "121212" # ---
+base02: "222222" # --
+base03: "333333" # -
+base04: "505754" # +
+base05: "c1c1c1" # ++
+base06: "dedede" # +++
+base07: "eaeaea" # ++++
+base08: "902C3B" # red
+base09: "D78438" # orange
+base0A: "2A8664" # yellow
+base0B: "E1A36B" # green
+base0C: "1F7A89" # aqua/cyan
+base0D: "546AD8" # blue
+base0E: "875FD4" # purple
+base0F: "CD6058" # brown

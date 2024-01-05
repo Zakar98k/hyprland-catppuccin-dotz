@@ -1,0 +1,151 @@
+/* <-- Base16 Colors --> */
+/* Start flavours */
+@define-color base00 #1e1d2d;
+@define-color base01 #181825;
+@define-color base02 #313244;
+@define-color base03 #45475a;
+@define-color base04 #585b70;
+@define-color base05 #cdd6f4;
+@define-color base06 #f5e0dc;
+@define-color base07 #b4befe;
+@define-color base08 #f38ba8;
+@define-color base09 #fab387;
+@define-color base0A #f9e2af;
+@define-color base0B #a6e3a1;
+@define-color base0C #94e2d5;
+@define-color base0D #89b4fa;
+@define-color base0E #cba6f7;
+@define-color base0F #f2cdcd;
+/* End flavours */
+
+#ironbar.background {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#bar.container,
+#ironbar.background {
+  /* border: solid 3px @base03; */
+  font-family:
+    /* "strandedttf", */
+    "Ttyp0 (OTB)",
+    JetBrainsMono Nerd Font,
+    Noto Sans CJK Regular,
+    sans;
+  font-weight: normal;
+  background-color: @base00;
+  color: @base05;
+  border: solid 1px @base02;
+  font-size: 16px;
+}
+
+#bar #start,
+#bar #center,
+#bar #end {
+  background-color: @base00;
+}
+
+.separator {
+  margin: 0px 10px;
+  color: @base02;
+}
+
+.popup {
+  font-family:
+    "Ttyp0 (OTB)",
+    BlexMono Nerd Font,
+    sans;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 4px;
+  padding: 15px;
+  border: 2px solid @base02;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* -- Clock -- */
+.clock {
+  font-family: "Ttyp0 (OTB)";
+  font-weight: bold;
+  font-size: 18px;
+  background-color: @base08;
+  color: @base00;
+  border-radius: 0px 0px 0px 0px;
+  margin: 4px 4px 4px 0px;
+  padding: 0px 12px;
+}
+
+.popup-clock .calendar-clock {
+  color: @base08;
+  /* margin-bottom: 12px; */
+  font-family: groundedttf;
+  font-size: 32px;
+}
+
+.popup-clock .calendar {
+  color: @base05;
+  /* border: 1px solid @base01; */
+  border: none;
+  padding: 8px;
+}
+
+/* -- Upower -- */
+.upower {
+  font-weight: normal;
+  background-color: @base00;
+  color: @base05;
+  border: 1px solid @base02;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+  margin: 4px 0px 4px 4px;
+  padding: 0px 12px;
+}
+
+/* -- Power menu widget -- */
+#power-button {
+  margin: 4px 0px 4px 4px;
+  padding: 0px 17px 0px 13px;
+  border-radius: 0px;
+  background-color: @base0A;
+  color: @base00;
+}
+
+#header {
+  font-family: beachedttf;
+  font-size: 20px;
+  margin: 25px 0 10px 25px;
+}
+
+/* -- Workspaces -- */
+.workspaces {
+  all: unset;
+  background-color: @base00;
+  /* border: 1px solid @base02; */
+  border-radius: 0px;
+  /* margin: 3px 0px 3px 0px; */
+}
+
+.workspaces .item {
+  all: unset;
+  border-radius: inherit;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 0px 13px;
+  padding-bottom: 2px;
+}
+
+.workspaces .visible {
+  color: @base05;
+}
+
+.workspaces .focused {
+  /* padding: 0px 30px; */
+  background-color: @base01;
+}
+
+.workspaces .inactive {
+  color: @base03;
+}
+
+.workspaces .item:hover {
+  background-color: @base01;
+}

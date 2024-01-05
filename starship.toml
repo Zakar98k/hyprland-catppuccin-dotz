@@ -1,0 +1,54 @@
+# Use custom format:
+format="┌ $directory$git_branch$git_status\n└ $character"
+palette = 'base16'
+add_newline = false
+
+# Prompt symbols 
+[character]
+# success_symbol = "[🞈](fg:base03)"
+# error_symbol = "[🞈](base08)"
+# vicmd_symbol = "[🞈](fg:yellow)"
+success_symbol = "[>>>](fg:base10)"
+error_symbol = "[>>>](fg:base08)"
+vicmd_symbol = "[<<<](fg:base09)"
+
+[directory]
+format = "[$read_only]($read_only_style)[$path](base13)"
+truncation_length = 4
+home_symbol= " "
+read_only="󰌾 "
+read_only_style="base08"
+
+[git_branch]
+format = " [ $branch](base10) "
+
+[git_status]
+format = '([\[$ahead_behind$untracked$staged\]]($style) )'
+style = "base04"
+ahead = 'a$count'
+diverged = 'a$ahead_count b$behind_count'
+behind = 'b$count'
+untracked = "u$count"
+staged = "+$count"
+
+# Start flavours
+# base16 Catppuccin Mocha colorscheme for starship
+# Author: https://github.com/catppuccin/catppuccin
+[palettes.base16]
+base00 = '#1e1d2d'
+base01 = '#181825'
+base02 = '#313244'
+base03 = '#45475a'
+base04 = '#585b70'
+base05 = '#cdd6f4'
+base06 = '#f5e0dc'
+base07 = '#b4befe'
+base08 = '#f38ba8'
+base09 = '#fab387'
+base10 = '#f9e2af'
+base11 = '#a6e3a1'
+base12 = '#94e2d5'
+base13 = '#89b4fa'
+base14 = '#cba6f7'
+base15 = '#f2cdcd'
+# End flavours

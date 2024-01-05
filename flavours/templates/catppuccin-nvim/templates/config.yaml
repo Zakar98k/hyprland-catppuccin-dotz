@@ -1,0 +1,6 @@
+default:
+  extension: .lua
+  output: colors
+bloody-valentine:
+  extension: .lua
+  output: colors

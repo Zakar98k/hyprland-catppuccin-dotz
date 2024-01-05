@@ -1,0 +1,108 @@
+shell = "bash -c '{}'"
+
+[[item]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
+subtemplate = "default"
+
+[[item]]
+file = "~/.config/foot/foot.ini"
+template = "foot"
+
+[[item]]
+file = "~/.config/wezterm/wezterm.lua"
+template = "wezterm-colors"
+start = "-- Start flavours"
+end = "-- End flavours"
+
+[[item]]
+file="~/.config/hypr/configs/hyprcolors.conf"
+template="hyprcolors"
+rewrite=true
+hook = "hyprctl reload"
+
+# [[item]]
+# file = "~/.config/waybar/colors.css"
+# template = "waybar"
+# rewrite = true
+
+[[item]]
+file = "~/.config/ironbar/style.css"
+template = "ironbar"
+start = "/* Start flavours */"
+end = "/* End flavours */"
+
+[[item]]
+file= "~/.config/mako/config"
+template = "mako"
+hook = "killall mako"
+
+[[item]]
+file= "~/.config/wofi/colors"
+template = "wofi"
+rewrite = true
+
+# [[item]]
+# file= "~/.config/nvim/lua/zakar98k/plugins/catppuccin.lua"
+# template = "catppuccin-nvim"
+# subtemplate = "bloody-valentine"
+# start = "-- Start flavours"
+# end = "-- End flavours"
+
+# [[item]]
+# file= "~/.config/nvim/lua/custom/plugins/colorscheme.lua"
+# template = "prism.nvim"
+# start = "-- Start flavours"
+# end = "-- End flavours"
+
+[[item]]
+file= "~/.config/nvim/lua/custom/themes/flavours.lua"
+template = "nvchad-base46"
+start = "-- Start flavours"
+end = "-- End flavours"
+
+[[item]]
+file= "~/.config/starship.toml"
+template = "starship"
+hook = "source ~/.zshrc"
+
+[[item]]
+file= "~/.config/cava/config"
+template = "cava"
+hook = "pkill -USR2 cava"
+
+[[item]]
+file="~/.config/btop/themes/current-base16.theme"
+template="btop"
+rewrite=true
+# hook="pkill -USR2 btop"
+
+[[item]]
+file="~/.config/.local/bin/theme.sh"
+template="theme.sh"
+hook="pkill -USR1 zsh"
+
+# [[itew]]
+# file= "~/.config/wal/colorschemes/dark/current.json"
+# template = "pywal"
+# rewrite = true
+# hook = "wal --theme current && clear"
+
+# [[item]]
+# file= "~/.mozilla/firefox/qoavtjpt.default-release/chrome/includes/cascade-colours.css"
+# template = "cascade-firefox"
+# start = "/* Start flavours */"
+# end = "/* End flavours */"
+
+# [[item]]
+# file = "~/.themes/FlatColor/colors3"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-3"
+# rewrite = true
+# hook = "gsettings set org.gnome.desktop.interface gtk-theme dummy && gsettings set org.gnome.desktop.interface gtk-theme FlatColor"
+
+# [[item]]
+# file = "~/.themes/FlatColor/colors2"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-2"
+# rewrite = true

@@ -1,0 +1,18 @@
+scheme: "Gruvbox Darker"
+author: "Zakar98k (zachquita@gmail.com) Gruvbox but darker (https://github.com/zakar98k)"
+base00: "000000" # ----
+base01: "121212" # ---
+base02: "222222" # --
+base03: "333333" # -
+base04: "999999" # +
+base05: "c1c1c1" # ++
+base06: "ebdbb2" # +++
+base07: "fbf1c7" # ++++
+base08: "fb4934" # red
+base09: "fe8019" # orange
+base0A: "fabd2f" # yellow
+base0B: "b8bb26" # green
+base0C: "8ec07c" # aqua/cyan
+base0D: "83a598" # blue
+base0E: "d3869b" # purple
+base0F: "d65d0e" # brown

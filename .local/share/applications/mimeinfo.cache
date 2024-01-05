@@ -1,0 +1,9 @@
+[MIME Cache]
+application/x-zoom=Zoom.desktop;
+x-scheme-handler/callto=Zoom.desktop;skypeforlinux.desktop;
+x-scheme-handler/obsidian=obsidian.desktop;
+x-scheme-handler/skype=skypeforlinux.desktop;
+x-scheme-handler/tel=Zoom.desktop;skypeforlinux.desktop;
+x-scheme-handler/zoommtg=Zoom.desktop;
+x-scheme-handler/zoomphonecall=Zoom.desktop;
+x-scheme-handler/zoomus=Zoom.desktop;

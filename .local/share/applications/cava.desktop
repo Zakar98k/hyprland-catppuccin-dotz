@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=cava
+GenericName=Audio Visualizer
+Comment=Terminal Audio Visualizer
+TryExec=cava
+Exec=cava
+Terminal=true
+Type=Application
+Keywords=Music;audio-visualizer;terminal;audio;
+Icon=audio-headphones
+Categories=Music;
+StartupNotify=false

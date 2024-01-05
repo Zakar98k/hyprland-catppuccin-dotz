@@ -1,0 +1,5 @@
+alias c="clear"
+alias ls="ls --color=auto"
+alias fetch="clear && neofetch"
+alias clock="tty-clock -csf %Y-%m-%d"
+alias pipes="pipes.sh -R"

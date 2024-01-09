@@ -36,7 +36,7 @@ staged = "+$count"
 # Author: https://github.com/catppuccin/catppuccin
 [palettes.base16]
 base00 = '#1e1d2d'
-base01 = '#181825'
+base01 = '#11111b'
 base02 = '#313244'
 base03 = '#45475a'
 base04 = '#585b70'

@@ -1,19 +1,19 @@
 shell = "bash -c '{}'"
 
-[[item]]
-file = "~/.config/alacritty/alacritty.yml"
-template = "alacritty"
-subtemplate = "default"
+# [[item]]
+# file = "~/.config/alacritty/alacritty.yml"
+# template = "alacritty"
+# subtemplate = "default"
 
 [[item]]
 file = "~/.config/foot/foot.ini"
 template = "foot"
 
-[[item]]
-file = "~/.config/wezterm/wezterm.lua"
-template = "wezterm-colors"
-start = "-- Start flavours"
-end = "-- End flavours"
+# [[item]]
+# file = "~/.config/wezterm/wezterm.lua"
+# template = "wezterm-colors"
+# start = "-- Start flavours"
+# end = "-- End flavours"
 
 [[item]]
 file="~/.config/hypr/configs/hyprcolors.conf"
@@ -32,10 +32,10 @@ template = "ironbar"
 start = "/* Start flavours */"
 end = "/* End flavours */"
 
-[[item]]
-file= "~/.config/mako/config"
-template = "mako"
-hook = "killall mako"
+# [[item]]
+# file= "~/.config/mako/config"
+# template = "mako"
+# hook = "killall mako"
 
 [[item]]
 file= "~/.config/wofi/colors"

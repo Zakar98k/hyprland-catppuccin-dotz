@@ -5,7 +5,7 @@
 THEME='Catppuccin-Mocha-Standard-Flamingo-Dark'
 ICONS='Colloid-grey-dark'
 FONT='Satoshi Variable Regular 11'
-CURSOR='Bibata-Original-Classic 26'
+CURSOR='Catppuccin-Mocha-Dark 24'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
@@ -17,4 +17,4 @@ apply_themes() {
 }
 
 apply_themes
-hyprctl setcursor "Bibata-Original-Classic 26"
+# hyprctl setcursor "Catppuccin-Mocha-Dark 24"

@@ -39,7 +39,7 @@ fontforge/
 base16-shell/
 oomox/
 fontconfig/
-swaync/
+# swaync/
 yay/
 QtProject/
 discord/

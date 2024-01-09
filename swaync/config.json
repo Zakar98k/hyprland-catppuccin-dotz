@@ -1,0 +1,142 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "center",
+  "positionY": "top",
+  "layer": "overlay",
+  "cssPriority": "application",
+  "control-center-margin-top": 20,
+  "control-center-margin-bottom": 20,
+  "control-center-margin-right": 20,
+  "control-center-margin-left": 1490,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 128,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "control-center-width": 400,
+  "control-center-height": 650,
+  "notification-window-width": 375,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "/home/denji/.config/.local/bin/notif.sh",
+      "urgency": "Normal",
+      "run-on": "receive"
+    }
+  },
+  "widgets": [
+    "title",
+    "menubar#desktop",
+    "volume",
+    "mpris",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Quick settings",
+      "clear-all-button": true,
+      "button-text": ""
+    },
+    "menubar#desktop": {
+      "menu#screenshot": {
+        "label": " \t   Screenshot\t\t",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Increase brightness",
+            "command": "ddccontrol -r 0x10 dev:/dev/i2c-6 -w $(($(ddccontrol -r 0x10 dev:/dev/i2c-6 -r 2> /dev/null | tail -n1 | cut -d '/' -f 2)+10))"
+          },
+           {
+             "label": "Decrease brightness",
+             "command": "ddccontrol -r 0x10 dev:/dev/i2c-6 -w $(($(ddccontrol -r 0x10 dev:/dev/i2c-6 -r 2> /dev/null | tail -n1 | cut -d '/' -f 2)-10))"
+           },
+          {
+            "label": "Displayport",
+            "command": "ddccontrol dev:/dev/i2c-6 -r 0x60 -w 3856"
+          },
+          {
+            "label": "HDMI1",
+            "command": "ddccontrol dev:/dev/i2c-6 -r 0x60 -w 3857"
+          }
+        ]
+      },
+      "menu#fan-control": {
+        "label": "\t    Cooling\t\t",
+        "position": "right",
+        "actions": [
+          {
+            "label": "Passive",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 0'"
+          },
+          {
+            "label": "Quiet",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 25'"
+          },
+          {
+            "label": "Full speed",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 100'"
+          }
+        ]
+      }
+    },
+    "buttons-grid#mobile": {
+      "actions": [
+        {
+          "label": "󰉄",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && echo 1 > /sys/class/leds/white\:flash/brightness || echo 0 > /sys/class/leds/white\:flash/brightness'",
+          "update_command": "sh -c '[[ $(cat /sys/class/leds/white\:flash/brightness) == \"1\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "󰁪",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && iio-hyprland DSI-1 || pkill iio-hyprland'",
+          "update_command": "pidof iio-hyprland"
+        },
+        {
+          "label": "󰂐",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && /etc/rc.d/scripts/sys/gadget start storage || /etc/rc.d/scripts/sys/gadget stop storage'",
+          "update_command": "sh -c '[[ $(/etc/rc.d/scripts/sys/gadget status storage) == enabled ]] && echo true || echo false'"
+        },
+        {
+          "label": "",
+          "command": "sh -c 'notify-send \"Copied!\" \"$(wl-paste)\" -i /usr/share/icons/Colloid-dark/actions/24/clipboard-shot-symbolic.svg; wl-paste | nc -c 192.168.1.15 1234'"
+        }
+      ]
+    },
+    "backlight#mobile": {
+      "label": "󰃠 ",
+       "device": "panel"
+    },
+    "volume": {
+      "label": "",
+      "expand-button-label": "",
+      "collapse-button-label": "",
+      "show-per-app": true,
+      "show-per-app-icon": true,
+      "show-per-app-label": false
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 4
+    },
+    "label": {
+      "text": "",
+      "clear-all-button": false
+    }
+  }
+}

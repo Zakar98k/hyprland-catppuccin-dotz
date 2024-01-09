@@ -4,10 +4,10 @@
   "positionY": "top",
   "layer": "overlay",
   "cssPriority": "application",
-  "control-center-margin-top": 20,
-  "control-center-margin-bottom": 20,
-  "control-center-margin-right": 20,
-  "control-center-margin-left": 1490,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 1508,
   "notification-icon-size": 64,
   "notification-body-image-height": 128,
   "notification-body-image-width": 200,
@@ -69,7 +69,7 @@
       },
       "menu#fan-control": {
         "label": "\t    Cooling\t\t",
-        "position": "right",
+        "position": "left",
         "actions": [
           {
             "label": "Passive",

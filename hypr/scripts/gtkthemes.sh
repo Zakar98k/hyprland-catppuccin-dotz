@@ -17,4 +17,5 @@ apply_themes() {
 }
 
 apply_themes
-# hyprctl setcursor "Catppuccin-Mocha-Dark 24"
+hyprctl setcursor "Catppuccin-Mocha-Dark 24"
+paplay ~/Music/sounds/startup.wav

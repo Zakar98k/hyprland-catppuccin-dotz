@@ -6,30 +6,35 @@ let {
     label = "󰇙"
     class = "separator"
   }
+
   $clock = {
     type = "clock"
-    format = "%a, %H:%M"
+    format = "%-I:%M%p | %a, %B %d"
   }
 
-  $focused = {
-    type = "focused"
-    show_icon = true
-    show_title = true
-    icon_size = 15
-    truncate.mode = "end"
-    truncate.max_length = 45
+  $control_center = { 
+    type = "custom" 
+    bar = [
+      {
+        type = "image"
+        // You can access environment vars in corn by prepending "env_"
+        src = "$env_HOME/.config/ironbar/rei.png"
+        size = 40
+        on_click_left = "swaync-client -op -sw"
+      }
+    ] 
   }
 
   $workspaces = {
     type = "workspaces"
     favorites = [ "1" "2" "3" "4" "5" "6" ]
     name_map = {
-      1 = "一"
-      2 = "二"
-      3 = "三"
-      4 = "四"
-      5 = "五"
-      6 = "六"
+      1 = ""
+      2 = ""
+      3 = ""
+      4 = ""
+      5 = ""
+      6 = ""
     }
   }
 
@@ -52,29 +57,6 @@ let {
     ]
   }
 
-  $expand_sys_info = {
-    type = "script"
-    mode = "poll"
-    interval = 100
-    cmd = "zsh -c 'if [ '$(ironbar get sys_revealer_state | tail -1)' = 'true' ]; then; echo '';else;echo '';fi'"
-    on_mouse_enter = "ironbar set sys_revealer_state true"
-    on_mouse_exit = "ironbar set sys_revealer_state false"
-  }
-
-  $sys_info_revealer = {
-    type = "custom"
-    transition_type = "slide_end"
-    transition_duration = 350
-    bar = [
-      {
-        show_if = "#sys_revealer_state"
-        transition_type = "slide_end"
-        type = "label"
-        label = "reveal man"
-      }
-    ]
-  }
-
   $upower = {
     type = "upower"
     format = "{percentage}%"
@@ -84,81 +66,23 @@ let {
   $tray = {
     type = "tray"
   }
-
-  // <-- Custom Power menu widget -->
-  $power_button = {
-    type = "button"
-    label = ""
-    name = "power-button"
-    on_click = "popup:toggle"
-  }
-
-  $power_menu_popup = {
-    type = "box"
-    orientation = "vertical"
-    widgets = [
-      { 
-        type = "box"
-        widgets = [
-          {
-            type = "image"
-            src = "/home/denji/.config/ironbar/rei.png"
-            size = 100
-            name = "powermenu-image"
-          }
-          {
-            type = "box"
-            orientation = "vertical"
-            widgets = [
-              { type = "label" name="header" label = "Till next time" }
-              { type = "label" class="updates" label = "Updates (AUR): {{7200000:yay -Qqu --aur | wc -l}}" }
-              { type = "label" class="updates" label = "Updates (Pacman): {{7200000:checkupdates | wc -l}}" }
-            ]
-          }
-        ]
-      }
-      {
-        type = "box"
-        class = "power-btn-box"
-        widgets = [
-            { type = "button" class="power-btn" label = "<span font-size='30pt'></span>" on_click = "!shutdown now" }
-            { type = "button" class="power-btn" label = "<span font-size='30pt'></span>" on_click = "!reboot" }
-            { type = "button" class="power-btn" label = "<span font-size='30pt'></span>" on_click = "!gtklock" }
-        ]
-      }
-    ]
-  }
-
-  $power_menu = {
-    type = "custom"
-    class = "power-menu"
-
-    bar = [ $power_button]
-    popup = [ $power_menu_popup ]
-
-    // tooltip = "Up: {{30000:uptime -p | cut -d ' ' -f2-}}"
-  }
-  // <-- Custom Power menu widget end -->
 }
 
 // Actual bar configuration
 in {
-  irovar_defaults = {
-    sys_info_revealer = false
-  } 
 
   name = "ironbar"
-  position = "bottom"
-  height = 38
+  position = "top"
+  height = 52
   width = 1600
-  popup_gap = 14
+  popup_gap = 10
+  icon_theme = "Colloid-grey-dark"
   
   margin.top = 0
-  margin.right = 120
-  margin.bottom = 10
-  margin.left = 120
+  margin.right = 0
+  margin.bottom = 0
+  margin.left = 0
 
-  start = [ $power_menu $separator $workspaces $separator $tray ]
-  center = [ $focused  ]
-  end = [ $info $separator $upower $clock ]
+  start = [ $workspaces $separator $tray ]
+  end = [ $info $separator $upower $clock $control_center ]
 }

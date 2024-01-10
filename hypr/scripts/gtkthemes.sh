@@ -5,7 +5,7 @@
 THEME='Catppuccin-Mocha-Standard-Flamingo-Dark'
 ICONS='Colloid-grey-dark'
 FONT='Satoshi Variable Regular 11'
-CURSOR='Catppuccin-Mocha-Dark 24'
+CURSOR='Bibata-Modern-Classic 24'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
@@ -16,6 +16,6 @@ apply_themes() {
 	#${SCHEMA} font-name "$FONT"
 }
 
-apply_themes
-hyprctl setcursor "Catppuccin-Mocha-Dark 24"
+# apply_themes
+hyprctl setcursor $CURSOR
 paplay ~/Music/sounds/startup.wav

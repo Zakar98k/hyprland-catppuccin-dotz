@@ -52,9 +52,9 @@
     /* margin: 0px; */
     /* margin: -15px -10px -15px -10px; */
     border-radius: 4px;
-    /* background: inherit; */
-    /* background: @base; */
-    background: @surface0;
+    background: inherit;
+    /* background: @theme_bg_color; */
+    /* background: shade(alpha(@borders, 2.55), 0.25); */
 }
 
 .notification button {
@@ -103,8 +103,8 @@
 .notification-action {
     border-radius: 0px;
     padding: 2px;
-    /* color: @text; */
-    color: @theme_text_color;
+    color: @text;
+    /* color: @theme_text_color; */
 }
 
 /* add bottom border radius to eliminate clipping */
@@ -119,15 +119,15 @@
 /*** Notification ***/
 /* Notification header */
 .summary {
-    /* color: @text; */
-    color: @theme_text_color;
+    color: @text;
+    /* color: @theme_text_color; */
     font-size: 16px;
     padding: 0px;
 }
 
 .time {
-    /* color: @text; */
-    color: alpha(@theme_text_color, 0.9);
+    color: @subtext0;
+    /* color: alpha(@theme_text_color, 0.9); */
     font-size: 12px;
     text-shadow: none;
     margin: 0px 0px 0px 0px;
@@ -137,8 +137,9 @@
 .body {
     font-size: 14px;
     font-weight: 500;
+    color: @subtext1;
     /* color: alpha(@text, 0.9); */
-    color: alpha(@theme_text_color, 0.9);
+    /* color: alpha(@theme_text_color, 0.9); */
     text-shadow: none;
     margin: 0px 0px 0px 0px;
 }
@@ -149,8 +150,8 @@
 
 /* The "Notifications" and "Do Not Disturb" text widget */
 .top-action-title {
-    /* color: @text; */
-    color: @theme_text_color;
+    color: @text;
+    /* color: @theme_text_color; */
     text-shadow: none;
 }
 
@@ -158,9 +159,9 @@
 
 .control-center {
     /* background: transparent; */
-    /* background: @base; */
-    background: @theme_bg_color;
-    border: 1px solid @borders;
+    background: @crust;
+    /* background: @theme_bg_color; */
+    /* border: 1px solid @borders; */
     border-radius: 6px;
     /* box-shadow: 0px 0px 2px black; */
 }
@@ -171,7 +172,7 @@
 
 .control-center-list {
     /* background: @base; */
-    background: @theme_bg_color;
+    background: @crust;
     min-height: 5px;
     /* border: 1px solid @surface1; */
     border-top: none;
@@ -181,12 +182,14 @@
 .control-center-list-placeholder,
 .notification-group-icon,
 .notification-group {
-    opacity: 1.0;
+    /* opacity: 1.0; */
     /* opacity: 0; */
-    /* background: none; */
+  color: alpha(@theme_text_color, 0.50);
 }
 
 .notification-group {
+    /* unset the annoying focus thingie */
+    all: unset;
     border: none;
     opacity: 0;
     padding: 0px;
@@ -194,11 +197,12 @@
     /* selectable: no; */
 }
 .notification-group > box {
-  /* background: @surface1; */
-    background: @theme_bg_color;
-    padding: 0px;
+    all: unset;
+    background: @mantle;
+    /* background: alpha(currentColor, 0.072); */
+    padding: 8px;
     margin: 0px;
-    margin: 0px -5px;
+    /* margin: 0px -5px; */
     border: none;
     border-radius: 4px;
     box-shadow: none;
@@ -208,9 +212,9 @@
 .notification-row {
     outline: none;
     transition: all 1s ease;
-    /* background: @surface0; */
-    background: @surface0;
-    /* border: 1px solid @surface1; */
+    background: @base;
+    /* background: @theme_bg_color; */
+    /* border: 1px solid alpha(@unfocused_borders, 0.25); */
     margin: 10px 5px 0px 5px;
     border-radius: 4px;
     /* box-shadow: 0px 0px 4px black; */
@@ -247,8 +251,8 @@
 /* Title widget */
 .widget-title {
     margin: 0px;
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: inherit;
+    /* background: @theme_bg_color; */
     border-radius: 4px 4px 0px 0px;
     /* border: 1px solid @surface1; */
     border-bottom: none;
@@ -265,14 +269,14 @@
     padding: 7px 3px;
     margin-right: 10px; 
     background: transparent;
-    /* color: @text; */
-    color: @theme_text_color;
+    color: @text;
+    /* color: @theme_text_color; */
     border: none;
     border-radius: 4px;
 }
 .widget-title > button:hover {
-    /* background: @surface1; */
-    background: alpha(currentColor, 0.1);
+    background: @base;
+    /* background: alpha(currentColor, 0.1); */
 }
 
 /* Label widget */
@@ -280,8 +284,8 @@
     margin: 0px;
     padding: 0px;
     min-height: 5px;
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: @mantle;
+    /* background: @theme_bg_color; */
     border-radius: 0px 0px 4px 4px;
     /* border: 1px solid @surface1; */
     border-top: none;
@@ -293,8 +297,8 @@
 
 /* Menubar */
 .widget-menubar {
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: inherit;
+    /* background: @theme_bg_color; */
     /* border: 1px solid @surface1; */
     border-top: none;
     border-bottom: none;
@@ -306,8 +310,8 @@
     background: transparent;
 }
 .widget-menubar > box > box > button {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     min-width: 185px;
     min-height: 50px;
     margin-right: 10px;
@@ -321,15 +325,15 @@
     box-shadow: none;
 }
 .widget-menubar button:focus:hover {
-    /* background: @surface1; */
-    background: alpha(currentColor,0.1);
+    background: @base;
+    /* background: alpha(currentColor,0.1); */
     box-shadow: none;
 }
 
 .widget-menubar > box > revealer > box {
     margin: 5px 10px 5px 10px;
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     border-radius: 4px;
 }
 .widget-menubar > box > revealer > box > button {
@@ -341,8 +345,8 @@
 
 /* Buttons grid */
 .widget-buttons-grid {
-    background-color: @theme_bg_color;
-    /* background-color: @base; */
+    /* background-color: @theme_bg_color; */
+    background-color: @mantle;
     /* border: 1px solid @surface1; */
     border-top: none;
     border-bottom: none;
@@ -354,8 +358,8 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     border-radius: 4px;
     min-height: 50px;
     min-width: 85px;
@@ -373,14 +377,14 @@
 
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    /* background: @surface1; */
-    background: alpha(currentColor, 0.1);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.1); */
 }
 
 /* Mpris widget */
 .widget-mpris {
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: @crust;
+    /* background: @theme_bg_color; */
     /* border: 1px solid @surface1; */
     border-top: none;
     border-bottom: none;
@@ -404,11 +408,12 @@
 }
 .widget-mpris > box {
     padding: 0px;
-    margin: -5px 0px -30px 0px;
+    margin: -5px 0px -10px 0px;
     padding: 0px;
     border-radius: 4px;
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
+    /* border: solid 4px red; */
 }
 
 /* Player button box */
@@ -439,6 +444,11 @@
     font-size: 1rem;
 }
 
+/* .widget-mpris-player > box > .widget-mpris-album-art { */
+/*     margin: -5px -10px; */
+/*     border: solid 4px red; */
+/* } */
+
 .widget-mpris-player > box > image {
     margin-bottom: -48px;
 }
@@ -446,8 +456,8 @@
 /* Backlight and volume widgets */
 .widget-backlight,
 .widget-volume {
-    /* background-color: @base; */
-    background-color: @theme_bg_color;
+    background-color: @crust;
+    /* background-color: @theme_bg_color; */
     /* border: 1px solid @surface1; */
     border-top: none;
     border-bottom: none;
@@ -458,8 +468,8 @@
     padding: 0px;
 }
 .widget-volume > box {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     border-radius: 4px;
     margin: 5px 10px 5px 10px;
     min-height: 50px;
@@ -474,12 +484,12 @@
     padding: 0px;
 }
 .widget-volume > box > button:hover {
-    background: alpha(currentColor, 0.05);
-    /* background: @surface1; */
+    /* background: alpha(currentColor, 0.05); */
+    background: @surface0;
 }
 .widget-volume > revealer > list {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     border-radius: 4px;
     margin-top: 5px;
     padding: 0px;
@@ -495,16 +505,16 @@
     border-radius: 4px;
 }
 .widget-backlight > scale {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @mantle;
+    /* background: alpha(currentColor, 0.05); */
     border-radius: 0px 4px 4px 0px;
     margin: 5px 10px 5px 0px;
     padding: 0px 10px 0px 0px;
     min-height: 50px;
 }
 .widget-backlight > label {
-    /* background: @surface0; */
-    background: alpha(currentColor, 0.05);
+    background: @surface0;
+    /* background: alpha(currentColor, 0.05); */
     margin: 5px 0px 5px 10px;
     border-radius: 4px 0px 0px 4px;
     padding: 0px;
@@ -520,30 +530,30 @@
 .widget-dnd > switch {
     font-size: initial;
     border-radius: 4px;
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: @base;
+    /* background: @theme_bg_color; */
     /* border: 1px solid @surface1; */
 }
 .widget-dnd > switch:checked {
     background: @insensitive_base_color;
 }
 .widget-dnd > switch slider {
-    /* background: @base; */
-    background: @theme_bg_color;
+    background: @base;
+    /* background: @theme_bg_color; */
     border-radius: 12px;
 }
 
 /* Toggles */
 .toggle:checked {
-    /* background: @surface1; */
-    background: @theme_selected_bg_color;
+    background: @surface1;
+    /* background: @theme_selected_bg_color; */
 }
 /*.toggle:not(:checked) {
     color: rgba(128, 128, 128, 0.5);
 }*/
 .toggle:checked:hover {
-    /* background: @surface2; */
-    background: alpha(@theme_selected_bg_color, 0.75);
+    background: @surface2;
+    /* background: alpha(@theme_selected_bg_color, 0.75); */
 }
 
 /* Sliders */
@@ -554,8 +564,8 @@ scale {
 
 scale trough {
     border-radius: 4px;
-    /* background: @surface1; */
-    background: alpha(currentColor, 0.1);
+    background: @surface0;
+    /* background: alpha(currentColor, 0.1); */
 }
 
 scale highlight {
@@ -573,4 +583,8 @@ scale slider {
     padding: 0px;
 }
 scale slider:hover {
+}
+
+.right.overlay-indicator {
+  all: unset;
 }

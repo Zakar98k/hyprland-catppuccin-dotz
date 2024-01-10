@@ -1,0 +1,30 @@
+{
+  "battery": {
+    "bat": "BAT0",
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{icon}",
+      //"format-icons": ["", "", "", "", ""],
+      "max-length": 25,
+      "format-icons": ["    ", "    ", "    ", "    ", "    "],
+      "format-time": "{H}hr & {m}min",
+      "tooltip-format": "{time} left, at {capacity}%",
+      "tooltip-format-discharging": "{time} left, at {capacity}󱧦",
+      "tooltip-format-charging": "{time} left till charged, at {capacity}󰢟"
+  },
+  "group/clock": {
+    "orientation": "inherit",
+    "modules": ["clock#time","clock#date"]
+  },
+  "clock#time": {
+    "interval": 60,
+    "format": "<big>{:%OI:%OM<sub>%p</sub></big>}"
+  },
+  "clock#date": {
+    "interval": 60,
+    "format": "{:%A, %b %e}"
+  }
+}

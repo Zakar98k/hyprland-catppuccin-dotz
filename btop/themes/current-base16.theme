@@ -1,6 +1,6 @@
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
-theme[main_bg]="#1e1d2d"
+theme[main_bg]="#1e1d2e"
 
 # Main text color
 theme[main_fg]="#cdd6f4"
@@ -15,7 +15,7 @@ theme[hi_fg]="#f38ba8"
 theme[selected_bg]="#f9e2af"
 
 # Foreground color of selected items
-theme[selected_fg]="#1e1d2d"
+theme[selected_fg]="#1e1d2e"
 
 # Color of inactive/disabled text
 theme[inactive_fg]="#11111b"

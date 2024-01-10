@@ -35,7 +35,7 @@ staged = "+$count"
 # base16 Catppuccin Mocha colorscheme for starship
 # Author: https://github.com/catppuccin/catppuccin
 [palettes.base16]
-base00 = '#1e1d2d'
+base00 = '#1e1d2e'
 base01 = '#11111b'
 base02 = '#313244'
 base03 = '#45475a'

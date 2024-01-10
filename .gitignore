@@ -56,7 +56,7 @@ systemd/
 gh/
 eww/
 wofi/
-waybar/
+# waybar/
 MusicBrainz/
 state
 gomp/

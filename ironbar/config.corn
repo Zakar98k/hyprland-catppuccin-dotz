@@ -20,7 +20,8 @@ let {
         // You can access environment vars in corn by prepending "env_"
         src = "$env_HOME/.config/ironbar/rei.png"
         size = 40
-        on_click_left = "swaync-client -op -sw"
+        on_click_left = "sleep 0.1 ; swaync-client -t -sw"
+        on_click_right = "sleep 0.1 ; swaync-client -d"
       }
     ] 
   }

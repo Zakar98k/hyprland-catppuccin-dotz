@@ -627,7 +627,7 @@ exit $?
 
 # Start flavours
 current
-0: #1e1d2d
+0: #1e1d2e
 1: #f38ba8
 2: #a6e3a1
 3: #f9e2af
@@ -643,7 +643,7 @@ current
 13: #cba6f7
 14: #94e2d5
 15: #b4befe
-background: #1e1d2d
+background: #1e1d2e
 foreground: #cdd6f4
 cursor: #cdd6f4
 # End flavours

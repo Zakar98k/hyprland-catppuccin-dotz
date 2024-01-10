@@ -26,11 +26,11 @@ hook = "hyprctl reload"
 # template = "waybar"
 # rewrite = true
 
-[[item]]
-file = "~/.config/ironbar/style.css"
-template = "ironbar"
-start = "/* Start flavours */"
-end = "/* End flavours */"
+# [[item]]
+# file = "~/.config/ironbar/style.css"
+# template = "ironbar"
+# start = "/* Start flavours */"
+# end = "/* End flavours */"
 
 # [[item]]
 # file= "~/.config/mako/config"

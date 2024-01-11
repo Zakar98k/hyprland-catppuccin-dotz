@@ -8,6 +8,6 @@
   "include": ["~/.config/waybar/modules.json"],
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [],
-  "modules-right": ["bluetooth","battery","group/clock"],
+  "modules-right": ["group/wifi-bluetooth","battery","group/clock"],
 
 }

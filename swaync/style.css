@@ -161,7 +161,7 @@
     /* background: transparent; */
     background: @crust;
     /* background: @theme_bg_color; */
-    border: 1px solid @surface0;
+    /* border: 1px solid @surface0; */
     border-radius: 6px;
     /* box-shadow: 0px 0px 2px black; */
 }

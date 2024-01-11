@@ -1,9 +1,9 @@
 {
   "battery": {
     "bat": "BAT0",
-    "format": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󰚥</small></span>",
-    "format-charging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󱐋</small></span>",
-    "format-discharging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󰂌</small></span>",
+    "format": "{icon}<span size='10pt'><b>{capacity}</b></span>",
+    "format-critical": "<span font_family='JetBrainsMono Nerd Font' color='#f38ba8'>{icon}</span><small><b>{capacity}</b></small>",
+    "format-good": "<span font_family='JetBrainsMono Nerd Font' color='#a6e3a1'>{icon}</span><small><b>{capacity}</b></small>",
     "format-icons": [
       "     ",
       "     ",
@@ -12,10 +12,12 @@
       "     "
     ],
     "format-time": "{H}hr & {m}min",
+    "format-warning": "<span font_family='JetBrainsMono Nerd Font' color='#f9e2af'>{icon}</span><small><b>{capacity}</b></small>",
     "interval": 60,
     "max-length": 25,
     "states": {
       "critical": 15,
+      "good": 100,
       "warning": 30
     },
     "tooltip-format": "{time} (󰚥 plugged), at {capacity}%",
@@ -42,9 +44,9 @@
     },
     "calendar": {
       "format": {
-        "days": "<span weight='light'>{}</span>",
+        "days": "<span weight='normal'>{}</span>",
         "months": "<span color='#cdd6f4'><b>{}</b></span>",
-        "today": "<span color='#f38ba8' weight='ultrabold'><u>{}</u></span>",
+        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
         "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
         "weeks": "<span color='#a6e3a1'><b>W{}</b></span>"
       },
@@ -54,17 +56,24 @@
       "weeks-pos": "right"
     },
     "format": "{:%A, %b %e}",
-    "interval": 1,
-    "tooltip-format": "<span color='#cdd6f4' font='JetBrainsMono Nerd Font 14'><small>{calendar}</small></span>"
+    "interval": 43200,
+    "tooltip-format": "<span color='#cdd6f4' font='Roboto Mono 14'><small>{calendar}</small></span>"
   },
   "clock#time": {
-    "format": "{:%OI<small><span color='#a6adc8'>:</span></small>%OM<sub><span color='#a6adc8'>%p</span></sub>}",
+    "format": "{:%OI<small><span color='#a6adc8'>:</span></small>%OM<span size='3pt'> </span><span weight='bold' size='10pt'>%p</span>}",
     "interval": 60
   },
   "group/clock": {
     "modules": [
       "clock#time",
       "clock#date"
+    ],
+    "orientation": "inherit"
+  },
+  "group/wifi-bluetooth": {
+    "modules": [
+      "network",
+      "bluetooth"
     ],
     "orientation": "inherit"
   },
@@ -88,5 +97,25 @@
     },
     "on-scroll-down": "hyprctl dispatch workspace e+1",
     "on-scroll-up": "hyprctl dispatch workspace e-1"
+  },
+  "network": {
+    "format": "{icon}",
+    "format-disconnected": "󰖪",
+    "format-ethernet": "󰈀",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format-linked": "󰖩",
+    "format-wifi": "{icon}",
+    "interval": 1,
+    "on-click": "nm-connection-editor",
+    "on-click-right": "rfkill toggle wifi",
+    "tooltip": true,
+    "tooltip-format": "interface:\t{ifname}\n\nconnected to {essid} at {signalStrength}% strength",
+    "tooltip-format-disconnected": "interface: {ifname}\nconnected to {essid}\nat {signalStrength}% strength"
   }
 }

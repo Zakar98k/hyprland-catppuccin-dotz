@@ -1,0 +1,56 @@
+
+@import url("catppuccin-mocha.css");
+
+#waybar {
+    background-color: @crust;
+    color: @text;
+    font-family: "Roboto Mono", "JetBrainsMono Nerd Font",monospace;
+}
+
+/* Space first and last modules evenly */
+.modules-right:last-child {
+    margin-right: 5px;
+}
+.modules-left:first-child {
+    margin-left: 5px;
+}
+
+/* Selecting every widget "group" */
+#workspaces,
+#battery,
+box.modules-right > box.horizontal {
+    background-color: @mantle;
+    /* border: red solid 1px; */
+    border-radius: 4px;
+    margin: 10px 5px;
+    padding: 0px 10px;
+}
+
+#network {
+    margin-right: 12px;
+}
+
+/* Styling the clock */
+#clock.date {
+    padding: 0px;
+    font-size: smaller;
+    margin-left: 8px;
+}
+#clock.time {
+    padding: 0px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Styling tooltips */
+tooltip {
+    border-radius: 15px;
+    background: @surface0;
+}
+tooltip > box {
+    border-radius: 15px;
+    padding: 15px
+}
+tooltip label {
+    color: @text;
+}

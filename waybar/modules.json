@@ -101,7 +101,7 @@
   "network": {
     "format": "{icon}",
     "format-disconnected": "󰖪",
-    "format-ethernet": "󰈀",
+    "format-ethernet": "󰈀/{cidr}",
     "format-icons": [
       "󰤯",
       "󰤟",
@@ -117,5 +117,9 @@
     "tooltip": true,
     "tooltip-format": "interface:\t{ifname}\n\nconnected to {essid} at {signalStrength}% strength",
     "tooltip-format-disconnected": "interface: {ifname}\nconnected to {essid}\nat {signalStrength}% strength"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 15
   }
 }

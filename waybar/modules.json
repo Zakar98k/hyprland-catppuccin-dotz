@@ -2,8 +2,8 @@
   "battery": {
     "bat": "BAT0",
     "format": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󰚥</small></span>",
-    "format-charging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󰢟</small></span>",
-    "format-discharging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󱧦</small></span>",
+    "format-charging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󱐋</small></span>",
+    "format-discharging": "<span font_family='JetBrainsMono Nerd Font'>{icon}<small>󰂌</small></span>",
     "format-icons": [
       "     ",
       "     ",
@@ -37,30 +37,28 @@
   },
   "clock#date": {
     "actions": {
-      "on-click-right": "mode",
       "on-scroll-down": "shift_down",
       "on-scroll-up": "shift_up"
     },
     "calendar": {
       "format": {
-        "days": "<span weight='light' color='#a6adc8'>{}</span>",
+        "days": "<span weight='light'>{}</span>",
         "months": "<span color='#cdd6f4'><b>{}</b></span>",
         "today": "<span color='#f38ba8' weight='ultrabold'><u>{}</u></span>",
         "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
         "weeks": "<span color='#a6e3a1'><b>W{}</b></span>"
       },
       "mode": "month",
-      "mode-mon-col": 2,
-      "on-click-right": "mode",
+      "mode-mon-col": 1,
       "on-scroll": 1,
       "weeks-pos": "right"
     },
     "format": "{:%A, %b %e}",
     "interval": 1,
-    "tooltip-format": "<span background='#11111b' color='#cdd6f4' font='JetBrainsMono Nerd Font 14'><small>{calendar}</small></span>"
+    "tooltip-format": "<span color='#cdd6f4' font='JetBrainsMono Nerd Font 14'><small>{calendar}</small></span>"
   },
   "clock#time": {
-    "format": "<big>{:%OI:%OM<sub>%p</sub></big>}",
+    "format": "{:%OI<small><span color='#a6adc8'>:</span></small>%OM<sub><span color='#a6adc8'>%p</span></sub>}",
     "interval": 60
   },
   "group/clock": {
@@ -73,20 +71,22 @@
   "hyprland/workspaces": {
     "active-only": false,
     "all-outputs": true,
-    "format": "{icon} <sub>{name}</sub>",
+    "format": "<big>{icon} </big><sub>{name}</sub>",
     "format-icons": {
-      "1": "󰽤",
-      "2": "󰽧",
-      "3": "󰽡",
-      "4": "󰽨",
-      "5": "󰽢",
-      "6": "󰽦",
-      "7": "󰽣",
-      "8": "󰽥",
-      "9": "󰽤",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
       "default": "",
       "persistent": "",
       "special": ""
-    }
+    },
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1"
   }
 }

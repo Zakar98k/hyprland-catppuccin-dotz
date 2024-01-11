@@ -1,6 +1,6 @@
 {
   "output": "eDP-1",
-  "height": 54, // Waybar height (to be removed for auto height)
+  "height": 48, // Waybar height (to be removed for auto height)
   "layer": "top", // Waybar at top layer
   "position": "top",
   "margin": "0px 0px 0px 0px",

@@ -1,13 +1,13 @@
 {
   "output": "eDP-1",
-  "height": 50, // Waybar height (to be removed for auto height)
+  "height": 54, // Waybar height (to be removed for auto height)
   "layer": "top", // Waybar at top layer
   "position": "top",
   "margin": "0px 0px 0px 0px",
 
   "include": ["~/.config/waybar/modules.json"],
-  "modules-left": [],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": [],
-  "modules-right": ["battery","group/clock"],
+  "modules-right": ["bluetooth","battery","group/clock"],
 
 }

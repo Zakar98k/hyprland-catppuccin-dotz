@@ -6,8 +6,7 @@
   "margin": "0px 0px 0px 0px",
 
   "include": ["~/.config/waybar/modules.json"],
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
-  "modules-right": ["group/wifi-bluetooth","battery","tray","group/clock"],
-
+  "modules-left": [],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["group/wifi-bluetooth","battery","tray","group/clock","custom/notification"]
 }

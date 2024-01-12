@@ -5,11 +5,16 @@
     "format-critical": "<span font_family='JetBrainsMono Nerd Font' color='#f38ba8'>{icon}</span><small><b>{capacity}</b></small>",
     "format-good": "<span font_family='JetBrainsMono Nerd Font' color='#a6e3a1'>{icon}</span><small><b>{capacity}</b></small>",
     "format-icons": [
-      "     ",
-      "     ",
-      "     ",
-      "     ",
-      "     "
+      "󰛞 󱢠 󱢠 󱢠 󱢠 ",
+      "󰣐 󱢠 󱢠 󱢠 󱢠 ",
+      "󰣐 󰛞 󱢠 󱢠 󱢠 ",
+      "󰣐 󰣐 󱢠 󱢠 󱢠 ",
+      "󰣐 󰣐 󰛞 󱢠 󱢠 ",
+      "󰣐 󰣐 󰣐 󱢠 󱢠 ",
+      "󰣐 󰣐 󰣐 󰛞 󱢠 ",
+      "󰣐 󰣐 󰣐 󰣐 󱢠 ",
+      "󰣐 󰣐 󰣐 󰣐 󰛞 ",
+      "󰣐 󰣐 󰣐 󰣐 󰣐 "
     ],
     "format-time": "{H}hr & {m}min",
     "format-warning": "<span font_family='JetBrainsMono Nerd Font' color='#f9e2af'>{icon}</span><small><b>{capacity}</b></small>",
@@ -60,8 +65,28 @@
     "tooltip-format": "<span color='#cdd6f4' font='Roboto Mono 14'><small>{calendar}</small></span>"
   },
   "clock#time": {
-    "format": "{:%OI<small><span color='#a6adc8'>:</span></small>%OM<span size='4pt'> </span><span weight='bold' size='10pt'>%p</span>}",
+    "format": "{:%OI<small><span color='#9399b2'>:</span></small>%OM<span size='4pt'> </span><span weight='bold' size='10pt' color='#9399b2'>%p</span>}",
     "interval": 60
+  },
+  "custom/notification": {
+    "escape": true,
+    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client",
+    "format": "{icon}",
+    "format-icons": {
+      "dnd-inhibited-none": "󰂚<sup></sup>",
+      "dnd-inhibited-notification": "󰂚<span foreground='#f38ba8'><sup></sup></span>",
+      "dnd-none": "󰂛",
+      "dnd-notification": "󰂛<span foreground='#f38ba8'><sup></sup></span>",
+      "inhibited-none": "󰂚<sup>󰜺</sup>",
+      "inhibited-notification": "󰵙<span foreground='#f38ba8'><sup></sup></span>",
+      "none": "󰂚<span color='#6c7086'><sup></sup></span>",
+      "notification": "󰂚<span foreground='#f38ba8'><sup></sup></span>"
+    },
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "return-type": "json",
+    "tooltip": false
   },
   "group/clock": {
     "modules": [
@@ -122,7 +147,6 @@
     "tooltip-format-disconnected": "interface: {ifname}\nconnected to {essid}\nat {signalStrength}% strength"
   },
   "tray": {
-    "icon-size": 18,
-    "spacing": 15
+    "icon-size": 18
   }
 }

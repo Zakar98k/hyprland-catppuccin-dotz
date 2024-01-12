@@ -9,16 +9,13 @@
 }
 
 /* Space first and last modules evenly */
-.modules-right:last-child {
-    margin-right: 4px;
-}
-.modules-left:first-child {
-    margin-left: 4px;
-}
+.modules-right:last-child { margin-right: 5px; }
+.modules-left:first-child { margin-left: 5px; }
 
-/* Make all the NFs bigger */
-/* #battery, */
-#wifi-bluetooth
+/* Make all the NF icons bigger */
+#battery,
+#wifi-bluetooth,
+#custom-notification
 {
     font-size: 18px;
 }
@@ -35,30 +32,84 @@
     color: alpha(@subtext0, 0.7);
 }
 
-/* Styling workspace */
-#workspaces,
-#workspaces button {
-    all: unset;
-}
 
 /* Selecting every widget "group" */
 #workspaces,
 #battery,
-#tray,
-box.modules-right > box.horizontal {
+box.modules-right > box.horizontal,
+#custom-notification {
     background-color: @mantle;
     /* border: red solid 1px; */
     border-radius: 4px;
-    margin: 8px 4px;
+    margin: 10px 5px;
     padding: 5px 10px;
 }
 
+/* #custom-notification {
+    padding-left: 9px;
+} */
 
+/* Styling workspace */
+#workspaces,
+#workspaces button {
+    /* border: 1px solid red; */
+    all: unset;
+}
+/* #workspaces {
+    background-color: @mantle;
+} */
+#workspaces > button { 
+    border-radius: 4px;
+    padding: 0px 15px; 
+    margin: 10px 0px;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 0px;
+}
+#workspaces > button.empty {
+    color: @overlay0;
+    /* border: 1px solid red; */
+}
+#workspaces > button.visible {
+    color: @overlay0;
+    /* border: 1px solid red; */
+}
+#workspaces > button.active {
+    color: @blue;
+    background: alpha(@blue, 0.1);
+    /* border-bottom: 1px solid @overlay0; */
+}
+#workspaces > button:hover { 
+    background: alpha(@blue, 0.2);
+    color: @text;
+}
+#workspaces > button:first-child {
+    border-radius: 20px 0px 0px 20px;
+}
+#workspaces > button:last-child {
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+/* Styling tray */
 #tray {
     background-color: transparent;
-    padding: 0px 5px;
+    padding: 0px 0px;
     margin: 0px;
 }
+#tray .active image {
+    /* border: solid 1px red; */
+    margin: 0px;
+    padding: 0px 5px;
+}
+/* #tray:first-child {
+    background-color: transparent;
+    margin-left: 5px;
+}
+#tray:last-child {
+    background-color: transparent;
+    margin-right: 5px;
+} */
 
 /* Wifi module spaced away from bluetooth*/
 #network {

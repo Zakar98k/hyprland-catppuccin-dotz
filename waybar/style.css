@@ -5,14 +5,40 @@
     background-color: @crust;
     color: @text;
     font-family: "Roboto Mono", "JetBrainsMono Nerd Font",monospace;
+    font-size: 16px;
 }
 
 /* Space first and last modules evenly */
 .modules-right:last-child {
-    margin-right: 5px;
+    margin-right: 4px;
 }
 .modules-left:first-child {
-    margin-left: 5px;
+    margin-left: 4px;
+}
+
+/* Make all the NFs bigger */
+/* #battery, */
+#wifi-bluetooth
+{
+    font-size: 18px;
+}
+
+/* Active and inactive states */
+#network.wifi {
+    color: @text;
+}
+#network.disabled,
+#network.disconnected,
+#bluetooth.disabled,
+#bluetooth.off
+{
+    color: alpha(@subtext0, 0.7);
+}
+
+/* Styling workspace */
+#workspaces,
+#workspaces button {
+    all: unset;
 }
 
 /* Selecting every widget "group" */
@@ -23,9 +49,10 @@ box.modules-right > box.horizontal {
     background-color: @mantle;
     /* border: red solid 1px; */
     border-radius: 4px;
-    margin: 10px 5px;
-    padding: 0px 10px;
+    margin: 8px 4px;
+    padding: 5px 10px;
 }
+
 
 #tray {
     background-color: transparent;
@@ -33,20 +60,20 @@ box.modules-right > box.horizontal {
     margin: 0px;
 }
 
-/* Wifi module */
+/* Wifi module spaced away from bluetooth*/
 #network {
     margin-right: 15px;
 }
 
 /* Styling the clock */
 #clock.date {
-    padding: 0px;
-    font-size: smaller;
+    font-size: 14px;
+    font-weight: normal;
     margin-left: 8px;
 }
 #clock.time {
     padding: 0px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
 }
 

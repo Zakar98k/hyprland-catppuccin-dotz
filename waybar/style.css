@@ -14,8 +14,10 @@
 
 /* Make all the NF icons bigger */
 #battery,
-#wifi-bluetooth,
-#custom-notification
+#sys-info,
+#custom-notification,
+#pulseaudio,
+#backlight
 {
     font-size: 18px;
 }
@@ -27,7 +29,9 @@
 #network.disabled,
 #network.disconnected,
 #bluetooth.disabled,
-#bluetooth.off
+#bluetooth.off,
+#pulseaudio.muted,
+#pulseaudio.source-muted
 {
     color: alpha(@subtext0, 0.7);
 }
@@ -37,7 +41,8 @@
 #workspaces,
 #battery,
 box.modules-right > box.horizontal,
-#custom-notification {
+#custom-notification,
+#sys-info {
     background-color: @mantle;
     /* border: red solid 1px; */
     border-radius: 4px;
@@ -49,19 +54,22 @@ box.modules-right > box.horizontal,
     padding-left: 9px;
 } */
 
+
 /* Styling workspace */
 #workspaces,
-#workspaces button {
+#workspaces button,
+#pulseaudio-slider,
+#backlight-slider {
     /* border: 1px solid red; */
     all: unset;
 }
-/* #workspaces {
+#workspaces {
     background-color: @mantle;
-} */
-#workspaces > button { 
-    border-radius: 4px;
-    padding: 0px 15px; 
     margin: 10px 0px;
+    border-radius: 4px;
+}
+#workspaces > button { 
+    padding: 0px 15px; 
     font-weight: 900;
     font-size: 20px;
     border-radius: 0px;
@@ -84,10 +92,12 @@ box.modules-right > box.horizontal,
     color: @text;
 }
 #workspaces > button:first-child {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 20px;
 }
 #workspaces > button:last-child {
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 4px 4px 0px;
+    padding-right: 20px;
 }
 
 
@@ -112,8 +122,48 @@ box.modules-right > box.horizontal,
 } */
 
 /* Wifi module spaced away from bluetooth*/
-#network {
+#network,
+#bluetooth,
+#pulseaudio
+{
     margin-right: 15px;
+}
+
+#backlight {
+    font-size: 16px;
+    margin-right: 5px
+}
+#pulseaudio {
+    font-size: 19px;
+}
+#pulseaudio.bluetooth {
+    color: @blue;
+}
+/* Styling brightness and volume and slider */
+#pulseaudio-slider,
+#backlight-slider {
+    margin-right: 10px;
+}
+#pulseaudio-slider slider,
+#backlight-slider slider {
+    margin: -10px;
+    min-width: 10px;
+    min-height: 10px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0px;
+
+}
+#pulseaudio-slider trough,
+#backlight-slider trough {
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: @surface0;
+}
+#pulseaudio-slider highlight,
+#backlight-slider highlight {
+    border-radius: 5px;
+    min-height: 8px;
 }
 
 /* Styling the clock */

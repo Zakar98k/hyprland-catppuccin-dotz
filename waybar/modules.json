@@ -88,6 +88,18 @@
     "return-type": "json",
     "tooltip": false
   },
+  "group/brightness": {
+    "drawer": {
+      "children-class": "brightness",
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "backlight",
+      "backlight/slider"
+    ],
+    "orientation": "horizontal"
+  },
   "group/clock": {
     "modules": [
       "clock#time",
@@ -95,12 +107,26 @@
     ],
     "orientation": "inherit"
   },
-  "group/wifi-bluetooth": {
+  "group/sys-info": {
     "modules": [
       "network",
-      "bluetooth"
+      "bluetooth",
+      "group/volume",
+      "group/brightness"
     ],
-    "orientation": "inherit"
+    "orientation": "horizontal"
+  },
+  "group/volume": {
+    "drawer": {
+      "children-class": "volume",
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ],
+    "orientation": "horizontal"
   },
   "hyprland/workspaces": {
     "active-only": false,
@@ -146,7 +172,40 @@
     "tooltip-format": "interface:\t{ifname}\n\nconnected to {essid} at {signalStrength}% strength",
     "tooltip-format-disconnected": "interface: {ifname}\nconnected to {essid}\nat {signalStrength}% strength"
   },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "",
+        "󰕾"
+      ]
+    },
+    "format-muted": "󰖁",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute 0 toggle",
+    "scroll-step": 1,
+    "tooltip-format": "{desc}\t{icon}{volume}%"
+  },
+  "pulseaudio/slider": {
+    "max": 100,
+    "min": 0,
+    "orientation": "horizontal"
+  },
   "tray": {
     "icon-size": 18
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "tooltip-format": "{icon}{percent}%",
+    "format-icons": ["󰃞","󰃝","󰃟","󰃠"]
+  },
+  "backlight/slider": {
+    "max": 100,
+    "min": 0,
+    "orientation": "horizontal",
+    "device": "intel_backlight"
   }
 }

@@ -81,7 +81,7 @@ logseq*
 Logseq/
 fcitx*
 mozc/
-nvim/
+# nvim/
 spek/
 sysfex/
 neofetch/

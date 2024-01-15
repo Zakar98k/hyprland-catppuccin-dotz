@@ -207,5 +207,20 @@
     "min": 0,
     "orientation": "horizontal",
     "device": "intel_backlight"
+  },
+  "custom/power-button": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "image": {
+    "tooltip": false,
+    "path": "/home/denji/.config/waybar/avatar.png",
+    "size": 47
+  },
+  "custom/keyboard": {
+    "format": "󰌌",
+    "on-click": "toggle-keyboard.sh",
+    "tooltip": false
   }
 }

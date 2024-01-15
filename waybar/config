@@ -6,7 +6,7 @@
   "margin": "0px 0px 0px 0px",
 
   "include": ["~/.config/waybar/modules.json"],
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["custom/power-button","hyprland/workspaces","custom/keyboard"],
   "modules-center": [],
   "modules-right": ["group/sys-info","battery","tray","group/clock","custom/notification"]
 }

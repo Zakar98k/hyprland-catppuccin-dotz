@@ -6,6 +6,7 @@
     color: @text;
     font-family: "Roboto Mono", "JetBrainsMono Nerd Font",monospace;
     font-size: 16px;
+    /* border-bottom: 1px solid @surface0; */
 }
 
 /* Space first and last modules evenly */
@@ -17,7 +18,9 @@
 #sys-info,
 #custom-notification,
 #pulseaudio,
-#backlight
+#backlight,
+#custom-power-button,
+#custom-keyboard
 {
     font-size: 18px;
 }
@@ -42,7 +45,10 @@
 #battery,
 box.modules-right > box.horizontal,
 #custom-notification,
-#sys-info {
+#sys-info,
+#custom-power-button,
+#custom-keyboard
+{
     background-color: @mantle;
     /* border: red solid 1px; */
     border-radius: 4px;
@@ -50,10 +56,17 @@ box.modules-right > box.horizontal,
     padding: 5px 10px;
 }
 
-/* #custom-notification {
-    padding-left: 9px;
-} */
+#custom-power-button,
+#custom-keyboard {
+    padding-right: 17px;
+    padding-left: 12px;
+}
 
+#custom-power-button {
+    background-color: alpha(@red, 0.1);
+    color: @red;
+
+}
 
 /* Styling workspace */
 #workspaces,
@@ -65,7 +78,7 @@ box.modules-right > box.horizontal,
 }
 #workspaces {
     background-color: @mantle;
-    margin: 10px 0px;
+    margin: 10px 5px;
     border-radius: 4px;
 }
 #workspaces > button { 

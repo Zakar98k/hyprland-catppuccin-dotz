@@ -51,20 +51,16 @@
         "position": "left",
         "actions": [
           {
-            "label": "Increase brightness",
-            "command": "ddccontrol -r 0x10 dev:/dev/i2c-6 -w $(($(ddccontrol -r 0x10 dev:/dev/i2c-6 -r 2> /dev/null | tail -n1 | cut -d '/' -f 2)+10))"
-          },
-           {
-             "label": "Decrease brightness",
-             "command": "ddccontrol -r 0x10 dev:/dev/i2c-6 -w $(($(ddccontrol -r 0x10 dev:/dev/i2c-6 -r 2> /dev/null | tail -n1 | cut -d '/' -f 2)-10))"
-           },
-          {
-            "label": "Displayport",
-            "command": "ddccontrol dev:/dev/i2c-6 -r 0x60 -w 3856"
+            "label": "Whole screen",
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave output"
           },
           {
-            "label": "HDMI1",
-            "command": "ddccontrol dev:/dev/i2c-6 -r 0x60 -w 3857"
+            "label": "Whole window",
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave area"
+          },
+          {
+            "label": "Select region",
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave area"
           }
         ]
       },

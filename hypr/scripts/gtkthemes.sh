@@ -2,10 +2,10 @@
 
 ## Set GTK Themes, Icons, Cursor and Fonts
 
-THEME='Catppuccin-Mocha-Standard-Flamingo-Dark'
+THEME='Catppuccin-Mocha-Standard-Mauve-Dark'
 ICONS='Colloid-grey-dark'
 FONT='Satoshi Variable Regular 11'
-CURSOR='S1mple-Catppuccin-Mocha 24'
+CURSOR='Qogir 24'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 

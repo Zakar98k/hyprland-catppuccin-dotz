@@ -55,11 +55,11 @@ rewrite = true
 # start = "-- Start flavours"
 # end = "-- End flavours"
 
-[[item]]
-file= "~/.config/nvim/lua/custom/themes/flavours.lua"
-template = "nvchad-base46"
-start = "-- Start flavours"
-end = "-- End flavours"
+# [[item]]
+# file= "~/.config/nvim/lua/custom/themes/flavours.lua"
+# template = "nvchad-base46"
+# start = "-- Start flavours"
+# end = "-- End flavours"
 
 [[item]]
 file= "~/.config/starship.toml"

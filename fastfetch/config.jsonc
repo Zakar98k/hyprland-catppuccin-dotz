@@ -1,37 +1,40 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "sixel",
-    "source": "/home/denji/.config/fastfetch/kobeni.sixel",
-    // "height": 12,
+  //   "type": "sixel",
+  //   //"source": "/home/denji/.config/fastfetch/apartment.sixel",
+  //   "source": "/home/denji/.config/fastfetch/apartment.png",
+  //   //"height": 14,
     "padding": {
       "left": 2
     }
   },
   "general": {
-    "playerName": "MPRIS"
+    "playerName": "mpris"
   },
   "display": {
+    // "separator": " » ",
     "separator": "",
     "color": "magenta",
-    "keyWidth": 10,
+    "keyWidth": 7,
     "size": {
       "maxPrefix": "MB",
       "ndigits": 1
     },
     "temperatureUnit": "C",
     "bar": {
-      "width": 10,
+      "width": 11,
       "border": false,
       "charTotal": "-",
       "charElapsed": "╸"
     },
     "percent": {
-      "type": 6
+      "type": 5
     },
     "noBuffer": true
   },
   "modules": [
+    "break",
     {
       "type": "title",
       "fqdn": false,
@@ -40,11 +43,61 @@
         "at": "default",
         "host": "blue"
       },
-      "key": "User"
+      // "key": "User"
+      "key": "‎",
+      "keyWidth": 1
     },
     "break",
+    // {
+    //   "type": "separator",
+    //   "string": "─"
+    // },
     {
-      "type": "break"
+      "type": "os",
+      "format": "{2}",
+      "key": "os"
+    },
+    {
+      "type": "kernel",
+      // "format": "{2}"
+      "key": "krn"
+    },
+    {
+      "type": "host",
+      "format": "{1}",
+      "key": "hst"
+    },
+    // {
+    //   "type": "uptime",
+    //   "key": "up",
+    //   "format": "{}d {2}h {3}m"
+    // },
+    {
+      "type": "shell",
+      "key": "sh"
+    },
+    {
+      "type": "wm",
+      "format": "{1}",
+      "key": "wm"
+    },
+    {
+      "type": "packages",
+      "format": "{2}",
+      "key": "pkg"
+    },
+    // {
+    //   "type": "battery",
+    //   "key": "bat"
+    // },
+    // {
+    //   "type": "memory",
+    //   "key": "mem"
+    // },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "square"
     }
   ]
 }

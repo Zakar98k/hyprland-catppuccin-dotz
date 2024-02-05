@@ -66,10 +66,10 @@ file= "~/.config/starship.toml"
 template = "starship"
 hook = "source ~/.zshrc"
 
-[[item]]
-file= "~/.config/cava/config"
-template = "cava"
-hook = "pkill -USR2 cava"
+# [[item]]
+# file= "~/.config/cava/config"
+# template = "cava"
+# hook = "pkill -USR2 cava"
 
 [[item]]
 file="~/.config/btop/themes/current-base16.theme"

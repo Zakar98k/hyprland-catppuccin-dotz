@@ -4,7 +4,7 @@
   //   "type": "sixel",
   //   //"source": "/home/denji/.config/fastfetch/apartment.sixel",
   //   "source": "/home/denji/.config/fastfetch/apartment.png",
-  //   //"height": 14,
+  "height": 14,
     "padding": {
       "left": 2
     }

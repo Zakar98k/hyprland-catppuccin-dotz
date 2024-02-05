@@ -65,7 +65,7 @@
         ]
       },
       "menu#fan-control": {
-        "label": "\t    Cooling\t\t",
+        "label": "󰕧\t    Record\t\t ",
         "position": "left",
         "actions": [
           {

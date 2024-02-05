@@ -17,11 +17,13 @@ eval "$(zoxide init zsh)"
 colorscripts=("bars" "zwaves" "blocks1" "pinguco" "crunchbang-mini" "colorwheel")
 colorscript exec ${colorscripts[$(($RANDOM % ${#colorscripts[@]} + 1 ))]}
 
-# Reload the colorscheme for new terminals
-# (cat ~/.cache/wal/sequences &)
-
 # Aliases
 source $HOME/.config/zsh/aliasrc
+
+# fetch
+
+# Reload the colorscheme for new terminals
+# (cat ~/.cache/wal/sequences &)
 
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

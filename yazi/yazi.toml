@@ -15,11 +15,11 @@ max_height      = 900
 
 [opener]
 edit = [
-	{ exec = 'nvim "$@"', block = true, for = "unix" },
+	{ exec = 'nvim "$@"', block = false, for = "unix" },
 	{ exec = 'code "%*"',    orphan = true, for = "windows" },
 ]
 open = [
-	{ exec = 'xdg-open "$@"', orphan = true,  desc = "Open", for = "linux" },
+	{ exec = 'xdg-open "$@"', block = false, orphan = true,  desc = "Open", for = "linux" },
 	{ exec = 'open "$@"',                 desc = "Open", for = "macos" },
 	{ exec = 'start "%1"', orphan = true, desc = "Open", for = "windows" }
 ]
@@ -33,7 +33,7 @@ extract = [
 	{ exec = 'unar "%1"', desc = "Extract here", for = "windows" },
 ]
 play = [
-	{ exec = 'mpv "$@"', orphan = true, for = "unix" },
+	{ exec = 'mpv "$@"', block = false, orphan = true, for = "unix" },
 	{ exec = 'mpv "%1"', orphan = true, for = "windows" },
 	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
 ]

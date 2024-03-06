@@ -13,8 +13,7 @@
   },
   "display": {
     "separator": "  »  ",
-    "color": "magenta",
-    // "keyWidth": 10,
+    "color": "magenta"
     "size": {
       "maxPrefix": "MB",
       "ndigits": 1

@@ -1,269 +1,109 @@
-
-# : Manager {{{
-
 [manager]
-cwd = { fg = "red" }
+cwd = { fg = "#94e2d5" }
 
 # Hovered
-hovered         = { fg = "black", bg = "lightcyan" }
-preview_hovered = { underline = false }
+hovered         = { fg = "#1e1e2e", bg = "#89b4fa" }
+preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { bg = "darkgray", bold = true }
-find_position = { fg = "magenta", bg = "reset" }
+find_keyword  = { fg = "#f9e2af", italic = true }
+find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
 
 # Marker
-marker_selected = { fg = "lightgreen",  bg = "lightgreen" }
-marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
-marker_cut      = { fg = "lightred",    bg = "lightred" }
+marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
+marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
+marker_selected = { fg = "#89b4fa", bg = "#89b4fa" }
 
 # Tab
-tab_active   = { fg = "black", bg = "lightcyan" }
-tab_inactive = { fg = "white", bg = "darkgray" }
+tab_active   = { fg = "#1e1e2e", bg = "#cdd6f4" }
+tab_inactive = { fg = "#cdd6f4", bg = "#45475a" }
 tab_width    = 1
 
-# Border
-border_symbol = " "
-border_style  = { fg = "white" }
+# Count
+count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
+count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
+count_selected = { fg = "#1e1e2e", bg = "#89b4fa" }
 
-# Offset
-folder_offset  = [ 1, 1, 2, 1 ]
-preview_offset = [ 2, 2, 2, 2 ]
+# Border
+border_symbol = "│"
+border_style  = { fg = "#7f849c" }
 
 # Highlighting
-syntect_theme = ""
-
-# : }}}
-
-
-# : Status {{{
+syntect_theme = "~/.config/yazi/catppuccin-mocha.tmTheme"
 
 [status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "darkgray", bg = "darkgray" }
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#45475a", bg = "#45475a" }
 
 # Mode
-mode_normal = { fg = "black", bg = "lightcyan", bold = true }
-mode_select = { fg = "black", bg = "lightgreen", bold = true }
-mode_unset  = { fg = "black", bg = "lightmagenta", bold = true }
+mode_normal = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
+mode_select = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
+mode_unset  = { fg = "#1e1e2e", bg = "#f2cdcd", bold = true }
 
 # Progress
-progress_label  = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
-progress_error  = { fg = "red", bg = "black" }
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#89b4fa", bg = "#45475a" }
+progress_error  = { fg = "#f38ba8", bg = "#45475a" }
 
 # Permissions
-permissions_t = { fg = "lightgreen" }
-permissions_r = { fg = "lightyellow" }
-permissions_w = { fg = "lightred" }
-permissions_x = { fg = "lightcyan" }
-permissions_s = { fg = "darkgray" }
-
-# : }}}
-
-
-# : Input {{{
+permissions_t = { fg = "#89b4fa" }
+permissions_r = { fg = "#f9e2af" }
+permissions_w = { fg = "#f38ba8" }
+permissions_x = { fg = "#a6e3a1" }
+permissions_s = { fg = "#7f849c" }
 
 [input]
-border   = { fg = "lightred" }
+border   = { fg = "#89b4fa" }
 title    = {}
 value    = {}
 selected = { reversed = true }
 
-# : }}}
-
-
-# : Select {{{
-
 [select]
-border   = { fg = "blue" }
-active   = { fg = "magenta" }
+border   = { fg = "#89b4fa" }
+active   = { fg = "#f5c2e7" }
 inactive = {}
-
-# : }}}
-
-
-# : Completion {{{
-
-[completion]
-border   = { fg = "blue" }
-active   = { bg = "darkgray" }
-inactive = {}
-
-# Icons
-icon_file    = "󰈔"
-icon_folder  = ""
-icon_command = ""
-
-# : }}}
-
-
-# : Tasks {{{
 
 [tasks]
-border  = { fg = "blue" }
+border  = { fg = "#89b4fa" }
 title   = {}
 hovered = { underline = true }
 
-# : }}}
-
-
-# : Which {{{
-
 [which]
-mask            = { bg = "black" }
-cand            = { fg = "lightcyan" }
-rest            = { fg = "darkgray" }
-desc            = { fg = "magenta" }
-separator       = " > "
-separator_style = { fg = "darkgray" }
-
-# : }}}
-
-
-# : Help {{{
+mask            = { bg = "#313244" }
+cand            = { fg = "#94e2d5" }
+rest            = { fg = "#9399b2" }
+desc            = { fg = "#f5c2e7" }
+separator       = "  "
+separator_style = { fg = "#585b70" }
 
 [help]
-on      = { fg = "magenta" }
-exec    = { fg = "cyan" }
-desc    = { fg = "gray" }
-hovered = { bg = "darkgray", bold = true }
-footer  = { fg = "black", bg = "white" }
-
-# : }}}
-
-
-# : File-specific styles {{{
+on      = { fg = "#f5c2e7" }
+exec    = { fg = "#94e2d5" }
+desc    = { fg = "#9399b2" }
+hovered = { bg = "#585b70", bold = true }
+footer  = { fg = "#45475a", bg = "#cdd6f4" }
 
 [filetype]
 
 rules = [
 	# Images
-	{ mime = "image/*", fg = "lightblue" },
+	{ mime = "image/*", fg = "#94e2d5" },
 
 	# Videos
-	{ mime = "video/*", fg = "yellow" },
-	{ mime = "audio/*", fg = "yellow" },
+	{ mime = "video/*", fg = "#f9e2af" },
+	{ mime = "audio/*", fg = "#f9e2af" },
 
 	# Archives
-	{ mime = "application/zip",             fg = "magenta" },
-	{ mime = "application/gzip",            fg = "magenta" },
-	{ mime = "application/x-tar",           fg = "magenta" },
-	{ mime = "application/x-bzip",          fg = "magenta" },
-	{ mime = "application/x-bzip2",         fg = "magenta" },
-	{ mime = "application/x-7z-compressed", fg = "magenta" },
-	{ mime = "application/x-rar",           fg = "magenta" },
+	{ mime = "application/zip",             fg = "#f5c2e7" },
+	{ mime = "application/gzip",            fg = "#f5c2e7" },
+	{ mime = "application/x-tar",           fg = "#f5c2e7" },
+	{ mime = "application/x-bzip",          fg = "#f5c2e7" },
+	{ mime = "application/x-bzip2",         fg = "#f5c2e7" },
+	{ mime = "application/x-7z-compressed", fg = "#f5c2e7" },
+	{ mime = "application/x-rar",           fg = "#f5c2e7" },
 
 	# Fallback
-	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "lightcyan" }
+	{ name = "*", fg = "#cdd6f4" },
+	{ name = "*/", fg = "#89b4fa" }
 ]
-
-[icons]
- 
-"Desktop/"     = "󰌢 "
-"Documents/"   = "󱧶 "
-"Downloads/"   = "󰉍 "
-"Pictures/"    = "󰉏 "
-"Music/"       = "󱍙 "
-"Movies/"      = "󰈰 "
-"Videos/"      = "󱧺 "
-"Public/"      = "󰉌 "
-# "Library/"     = " "
-# "Development/" = " "
-".config/"     = " "
-
-# Git
-".git/"          = " "
-".gitignore"     = " "
-".gitmodules"    = " "
-".gitattributes" = " "
-
-# Dotfiles
-".DS_Store"    = " "
-".bashrc"      = " "
-".bashprofile" = " "
-".zshrc"       = " "
-".zshenv"      = " "
-".zprofile"    = " "
-".vimrc"       = " "
-
-# Text
-"*.txt" = " "
-"*.md"  = " "
-
-# Archives
-"*.zip" = " "
-"*.tar" = " "
-"*.gz"  = " "
-"*.7z"  = " "
-
-# Audio
-"*.mp3"  = " "
-"*.flac" = " "
-"*.wav"  = " "
-"*.opus"  =" "
-
-# Movies
-"*.mp4" = "󰕧 "
-"*.mkv" = "󰕧 "
-"*.avi" = "󰕧 "
-"*.mov" = "󰕧 "
-"*.webm" = "󰕧 "
-
-# Images
-"*.jpg"  = " "
-"*.jpeg" = " "
-"*.png"  = " "
-"*.gif"  = " "
-"*.webp" = " "
-"*.avif" = " "
-"*.bmp"  = " "
-"*.ico"  = " "
-"*.svg"  = " "
-
-# Programming
-"*.c"     = " "
-"*.cpp"   = " "
-"*.h"     = " "
-"*.hpp"   = " "
-"*.rs"    = " "
-"*.go"    = " "
-"*.py"    = " "
-"*.js"    = " "
-"*.ts"    = " "
-"*.tsx"   = " "
-"*.jsx"   = " "
-"*.rb"    = " "
-"*.php"   = " "
-"*.java"  = " "
-"*.sh"    = " "
-"*.fish"  = " "
-"*.swift" = " "
-"*.vim"   = " "
-"*.lua"   = " "
-"*.html"  = " "
-"*.css"   = " "
-"*.scss"  = " "
-"*.json"  = " "
-"*.toml"  = " "
-"*.yml"   = " "
-"*.yaml"  = " "
-"*.ini"   = " "
-"*.conf"  = " "
-"*.cfg"  = " "
-
-## Godot
-"*.gd"  = " "
-"*.tscn"  = "󰈰 "
-
-## Other
-"*.aseprite"  = "󰏫 "
-"PKGBUILD"  = "󰏓 "
-
-# Default
-"*"  = "󰈔 "
-"*/" = " "
-
-# : }}}

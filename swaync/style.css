@@ -392,7 +392,8 @@
     margin: -5px 0px -10px 0px;
     padding: 0px;
     border-radius: 4px;
-    background: alpha(currentColor, 0.05);
+    /* background: alpha(currentColor, 0.05); */
+    background: @mantle;
 }
 .widget-mpris > box > button:nth-child(1),
 .widget-mpris > box > button:nth-child(3) {

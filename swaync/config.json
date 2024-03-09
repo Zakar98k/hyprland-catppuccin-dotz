@@ -55,11 +55,7 @@
             "command": "grimblast --notify --cursor --freeze --wait 3 copysave output"
           },
           {
-            "label": "Whole window",
-            "command": "grimblast --notify --cursor --freeze --wait 3 copysave area"
-          },
-          {
-            "label": "Select region",
+            "label": "Whole window / Select region",
             "command": "grimblast --notify --cursor --freeze --wait 3 copysave area"
           }
         ]

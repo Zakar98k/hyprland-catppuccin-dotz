@@ -21,7 +21,9 @@
       "maxPrefix": "MB",
       "ndigits": 1
     },
-    "temperatureUnit": "C",
+  "temp": {
+      "unit": "C"
+    },
     "bar": {
       "width": 11,
       "border": false,

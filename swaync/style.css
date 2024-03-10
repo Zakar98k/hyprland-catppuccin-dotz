@@ -410,6 +410,10 @@
     opacity: 0;
 }
 
+.widget-mpris-album-art {
+  all: unset;
+}
+
 /* Player button box */
 .widget-mpris > box > carousel > widget > box > box:nth-child(2) {
     margin: 5px 0px -5px 90px;
@@ -437,6 +441,7 @@ carouselindicatordots {
 }
 
 .widget-mpris-player {
+  border-radius: 0px;
 	margin: 0px;
 }
 .widget-mpris-player > box > image {

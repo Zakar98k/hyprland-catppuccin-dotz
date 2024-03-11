@@ -1,6 +1,7 @@
 alias c="clear"
 alias ls="ls --color=auto"
 alias fetch="c && fastfetch --logo-type auto --logo ~/.config/fastfetch/roses.txt"
-alias animefetch="c && fastfetch --logo-type sixel --logo ~/.config/fastfetch/apartment.png"
+# alias animefetch="c && fastfetch --logo-type sixel --logo ~/.config/fastfetch/.png"
+alias animefetch="c && fastfetch --logo-type sixel --logo ~/.config/fastfetch/nirvana-aesthetic.png"
 alias clock="tty-clock -csf %Y-%m-%d"
 alias pipes="pipes.sh -R"

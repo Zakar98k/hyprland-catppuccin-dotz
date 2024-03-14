@@ -5,20 +5,22 @@ Since Catppuccin has so much ports, it's no challenge to rice with.
 
 ## Dependencies
 - status bar: waybar
+  - for virtual keyboard, install wvkbd-mobintl
 - notification daemon & control center: swaync
 - terminal: foot
 - terminal font: [Terminus\-ja](https://eng.fontke.com/font/10278296/) (link might be broken idk)
 - custom prompt: starship
 - gtk theme: official Catppuccin GTK port
+- mouse cursor: Bibata-Modern-Classic
 - gtk font: Product Sans (free for personal use, but not commercial)
 - audio visualizer: cava
 - music player (TUI): mpd & ncmpcpp
 - file manager (TUI): yazi 
 - file manager (GUI): nemo and/or nautilus 
 - screenshot helper: grimblast (do `grimblast check` to see if its dependencies are satisfied)
-- app launcher: rofi (sorry no theme yet)
+- app launcher: rofi (for theme, copy `~/.config/.local/share/rofi/themes/catppuccin-mocha.rasi` to `~/.local/share/rofi/themes/catppuccin-mocha.rasi`)
 - wlogout
-- gtklock
+- gtklock (requires additional modules to be installed, check `~/.config/gtklock/config.ini`)
 - hyprpaper
 - hypridle
 

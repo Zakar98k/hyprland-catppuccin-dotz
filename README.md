@@ -7,6 +7,7 @@ Since Catppuccin has so much ports, it's no challenge to rice with.
 - status bar: waybar
   - for virtual keyboard, install wvkbd-mobintl
 - notification daemon & control center: swaync
+- system fetch: fastfetch (aliased to commands `fetch` and `animefetch`)
 - terminal: foot
 - terminal font: [Terminus\-ja](https://eng.fontke.com/font/10278296/) (link might be broken idk)
 - custom prompt: starship

@@ -11,36 +11,99 @@
 @define-color bg-alt #1f222e;
 @define-color fg #bdc3c7;
 
+/*
+*
+* Catppuccin Mocha palette
+* Maintainer: rubyowo
+*
+*/
+
+@define-color base   #1E1D2E;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+
 * {
   all: unset;
 }
 
 window {
-  background-color: @bg;
-  background-image: url("wallpaper.jpg");
+  background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#window-box {
-  background-color: alpha(@bg, 0.96);
-  border: 1px solid @color0;
-  box-shadow: 10px 10px 0px @bg;
+#window-box,
+#playerctl-revealer > box,
+#powerbar-revealer > box {
+  color: @text;
+  background-color: alpha(@crust, 0.94);
+  border: 1px solid @base;
+  box-shadow: 10px 10px 0px @crust;
   padding: 0 3em;
+}
+
+#playerctl-revealer > box,
+#powerbar-revealer > box {
+  padding: 1em 1em;
+  box-shadow: none;
+}
+#playerctl-revealer > box {
+  margin-top: 1em;
+}
+#powerbar-revealer > box {
+  margin-bottom: 1em;
 }
 
 #clock-label {
   min-width: 320px;
-  background-color: alpha(@color4, 0.1);
-  color: @color4;
+  background-color: alpha(@green, 0.1);
+  color: @green;
   font-weight: 500;
   font-size: 9pt;
   padding: 10px 30px;
   margin-bottom: 10px;
   border-radius: 0 0 10px 10px;
-  border: 1px solid alpha(@color4, 0.5);
+  border: 1px solid alpha(@green, 0.5);
   border-top: 0;
+}
+
+.image-button {
+  padding: 0.5em;
+}
+/* .horizontal > image { */
+/*   min-width: 0.5em; */
+/*   min-height: 0.5em; */
+/* } */
+.image-button:hover {
+  background-color: alpha(currentColor, 0.1);
 }
 
 /* hide "Password:" label */
@@ -55,7 +118,7 @@ window {
 #input-field {
   border-radius: 20px;
   padding: 10px 15px;
-  border: 1px solid @color0;
+  border: 1px solid @base;
 }
 
 #warning-label,
@@ -68,8 +131,8 @@ window {
 
 #unlock-button {
   border-radius: 20px;
-  background-color: alpha(@color4, 0.1);
-  color: @color4;
+  background-color: alpha(@green, 0.1);
+  color: @green;
   border-radius: 25px;
-  border: 1px solid alpha(@color4, 0.5);
+  border: 1px solid alpha(@green, 0.5);
 }

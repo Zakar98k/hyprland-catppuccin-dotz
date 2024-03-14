@@ -3,6 +3,13 @@ Yeah, I gave in and riced Hyprland with Catppuccin. *insert numerous buzz lighty
 
 Since Catppuccin has so much ports, it's no challenge to rice with.
 
+## Screenshots
+![1](/media/1.png)
+![2](/media/2.png)
+![3](/media/3.png)
+![4](/media/4.png)
+![5](/media/5.png)
+
 ## Dependencies
 - status bar: waybar
   - for virtual keyboard, install wvkbd-mobintl

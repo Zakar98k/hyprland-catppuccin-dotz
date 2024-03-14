@@ -11,26 +11,26 @@ Since Catppuccin has so much ports, it's no challenge to rice with.
 ![5](/media/5.png)
 
 ## Dependencies
-- status bar: waybar
-  - for virtual keyboard, install wvkbd-mobintl
-- notification daemon & control center: swaync
-- system fetch: fastfetch (aliased to commands `fetch` and `animefetch`)
-- terminal: foot
-- terminal font: [Terminus\-ja](https://eng.fontke.com/font/10278296/) (link might be broken idk)
-- custom prompt: starship
-- gtk theme: official Catppuccin GTK port
-- mouse cursor: Bibata-Modern-Classic
-- gtk font: Product Sans (free for personal use, but not commercial)
-- audio visualizer: cava
-- music player (TUI): mpd & ncmpcpp
-- file manager (TUI): yazi 
-- file manager (GUI): nemo and/or nautilus 
-- screenshot helper: grimblast (do `grimblast check` to see if its dependencies are satisfied)
-- app launcher: rofi (for theme, copy `~/.config/.local/share/rofi/themes/catppuccin-mocha.rasi` to `~/.local/share/rofi/themes/catppuccin-mocha.rasi`)
-- wlogout
-- gtklock (requires additional modules to be installed, check `~/.config/gtklock/config.ini`)
-- hyprpaper
-- hypridle
+* status bar: [waybar](https://github.com/Alexays/Waybar)
+   * for virtual keyboard, install [wvkbd-mobintl](https://github.com/jjsullivan5196/wvkbd)
+* notification daemon & control center: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
+* system fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch) (aliased to commands `fetch` and `animefetch`)
+* terminal: [foot](https://codeberg.org/dnkl/foot)
+* terminal font: [Terminus-ja](https://eng.fontke.com/font/10278296/) (link might be broken idk)
+* custom prompt: [starship](https://starship.rs/)
+* gtk theme: [official Catppuccin GTK port](https://github.com/catppuccin/gtk)
+* mouse cursor: Bibata-Modern-Classic
+* gtk font: Product Sans (free for personal use, but not commercial)
+* audio visualizer: [cava](https://github.com/karlstav/cava)
+* music player (TUI): mpd & ncmpcpp
+* file manager (TUI): [yazi](https://github.com/sxyazi/yazi)
+* file manager (GUI): nemo and/or nautilus
+* screenshot helper: [grimblast](https://github.com/hyprwm/contrib/tree/main/grimblast) (do `grimblast check` to see if its dependencies are satisfied)
+* app launcher: [rofi](https://github.com/lbonn/rofi) (for theme, copy `~/.config/.local/share/rofi/themes/catppuccin-mocha.rasi` to `~/.local/share/rofi/themes/catppuccin-mocha.rasi`)
+* [wlogout](https://github.com/ArtsyMacaw/wlogout)
+* [gtklock](https://github.com/jovanlanik/gtklock) (requires additional modules to be installed, check `~/.config/gtklock/config.ini`)
+* [hyprpaper](https://github.com/hyprwm/hyprpaper)
+* [hypridle](https://github.com/hyprwm/hypridle)
 
 
 <!-- ## TO-DO -->

@@ -77,7 +77,7 @@ box.modules-right > box.horizontal,
     all: unset;
 }
 #workspaces {
-    background-color: @base;
+    background-color: @mantle;
     margin: 10px 5px;
     border-radius: 4px;
 }

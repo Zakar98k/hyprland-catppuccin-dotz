@@ -118,7 +118,7 @@ window {
 #input-field {
   border-radius: 20px;
   padding: 10px 15px;
-  border: 1px solid @base;
+  border: 1px solid @surface0;
 }
 
 #warning-label,

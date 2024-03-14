@@ -2,7 +2,7 @@
   "output": "eDP-1",
   "height": 48, // Waybar height (to be removed for auto height)
   "layer": "top", // Waybar at top layer
-  "position": "bottom",
+  "position": "top",
   "margin": "0px 0px 0px 0px",
 
   "include": ["~/.config/waybar/modules.json"],

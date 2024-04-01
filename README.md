@@ -13,6 +13,7 @@ Since Catppuccin has so much ports, it's no challenge to rice with.
 ## Dependencies
 * status bar: [waybar](https://github.com/Alexays/Waybar)
    * for virtual keyboard, install [wvkbd-mobintl](https://github.com/jjsullivan5196/wvkbd)
+   * for pomodoro module, install [pomodoro-cli](https://github.com/jkallio/pomodoro-cli)
 * notification daemon & control center: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 * system fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch) (aliased to commands `fetch` and `animefetch`)
 * terminal: [foot](https://codeberg.org/dnkl/foot)

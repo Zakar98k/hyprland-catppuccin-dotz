@@ -2,11 +2,11 @@
   "output": "eDP-1",
   "height": 48, // Waybar height (to be removed for auto height)
   "layer": "top", // Waybar at top layer
-  "position": "top",
+  "position": "bottom",
   "margin": "0px 0px 0px 0px",
 
   "include": ["~/.config/waybar/modules.json"],
-  "modules-left": ["custom/power-button","hyprland/workspaces","custom/keyboard"],
+  "modules-left": ["custom/power-button","hyprland/workspaces","custom/keyboard", "group/pomo"],
   "modules-center": [],
   "modules-right": ["group/sys-info","battery","tray","group/clock","custom/notification"]
 }

@@ -220,7 +220,35 @@
   },
   "custom/keyboard": {
     "format": "󰌌",
-    "on-click": "toggle-keyboard.sh",
+    "on-click": "sleep 0.1 && toggle-keyboard.sh",
     "tooltip": false
+  },
+
+  "custom/pomo-icon": {
+    "format": "",
+    "exec": "pomodoro-cli status --format json --time-format digital",
+    "return-type": "json",
+    "on-click": "pomodoro-cli start --silent --notify --add 5m; pkill -SIGRTMIN+10 waybar",
+    "on-click-middle": "pomodoro-cli pause; pkill -SIGRTMIN+10 waybar",
+    "on-click-right": "pomodoro-cli stop; pkill -SIGRTMIN+10 waybar",
+    "signal": 10,
+    "interval": 1
+  },
+  "custom/pomo-label": {
+    "format": "{}",
+    "exec": "pomodoro-cli status --format json --time-format digital",
+    "return-type": "json",
+    "on-click": "pomodoro-cli start --silent --notify --add 5m; pkill -SIGRTMIN+10 waybar",
+    "on-click-middle": "pomodoro-cli pause; pkill -SIGRTMIN+10 waybar",
+    "on-click-right": "pomodoro-cli stop; pkill -SIGRTMIN+10 waybar",
+    "signal": 10,
+    "interval": 1
+  },
+  "group/pomo": {
+  "modules": [
+    "custom/pomo-icon",
+    "custom/pomo-label"
+  ],
+  "orientation": "inherit"
   }
 }

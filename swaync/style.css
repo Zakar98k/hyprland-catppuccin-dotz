@@ -46,6 +46,10 @@
 /*   border: solid 4px red; */
 /* } */
 
+label {
+  color: @text;
+}
+
 .notification {
     border: none;
     box-shadow: none;
@@ -431,11 +435,13 @@ carouselindicatordots {
 }
 
 .widget-mpris-title {
+    color: #eeeeee;
     font-weight: bold;
     font-size: 1.25rem;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 .widget-mpris-subtitle {
+    color: #eeeeee;
     font-size: 1rem;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
 }

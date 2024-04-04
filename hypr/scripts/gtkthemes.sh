@@ -5,7 +5,7 @@
 THEME='Catppuccin-Mocha-Standard-Mauve-Dark'
 ICONS='Colloid-grey-dark'
 FONT='Satoshi Variable Regular 11'
-CURSOR='Qogir 24'
+CURSOR='Catppuccin-Mocha-Dark 24'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 

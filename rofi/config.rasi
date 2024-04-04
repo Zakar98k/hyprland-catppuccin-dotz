@@ -1,6 +1,6 @@
 configuration{
     modi: "run,drun,window";
-    icon-theme: "Oranchelo";
+    icon-theme: "Colloid-Grey-Dark";
     show-icons: true;
     terminal: "foot";
     drun-display-format: "{icon} {name}";
